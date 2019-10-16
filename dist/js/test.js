@@ -1,0 +1,1 @@
+import{sayHi,sayBye}from"./log.js";sayHi("John"),sayBye("John");
