@@ -1,4 +1,4 @@
-@import 'src/js/lib/log.js'
+import './lib/log.js'
 
 deneme('John'); // Hello, John!
 deneme('John'); // Bye, John!
