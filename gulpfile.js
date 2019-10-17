@@ -11,6 +11,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
+const jsImport = require('gulp-js-import');
 
 // File paths
 const files = {
@@ -37,6 +38,10 @@ function jsTask(){
     ])
         //.pipe(babel({presets: ['es2015']}))
         //.pipe(concat('app.js'))
+        .pipe(jsImport({
+            hideConsole: true,
+            importStack: true
+        }))
         .pipe(uglify())
         .pipe(dest('dist/js')
         );

@@ -1,1 +1,1 @@
-function sayHi(e){alert(`Hello, ${e}!`)}function sayBye(e){alert(`Bye, ${e}!`)}export{sayHi,sayBye};
+function deneme(){console.log("deneme")}

@@ -1,1 +1,1 @@
-import{sayHi,sayBye}from"./log.js";sayHi("John"),sayBye("John");
+function deneme(){console.log("deneme")}deneme("John"),deneme("John");

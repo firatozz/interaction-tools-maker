@@ -1,4 +1,4 @@
-import {sayHi, sayBye} from './log.js';
+@import 'src/js/lib/log.js'
 
-sayHi('John'); // Hello, John!
-sayBye('John'); // Bye, John!
+deneme('John'); // Hello, John!
+deneme('John'); // Bye, John!
