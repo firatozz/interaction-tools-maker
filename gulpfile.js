@@ -11,7 +11,6 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
-var bootstrap = require('bootstrap');
 const jsImport = require('gulp-js-import-file');
 
 // File paths
