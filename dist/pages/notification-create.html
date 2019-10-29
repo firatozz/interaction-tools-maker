@@ -30,7 +30,44 @@
 
                     <div class="collapse" id="customizeHtml">
                         <div class="card card-body">
-                            CUSTOMIZE HTML.
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
+                                <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
+                                    Click</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
+                                <label class="custom-control-label" for="allowPopupDismissal">Allow Popup
+                                    Dismissal</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
+                                <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="dismissOnOverlayClick">
+                                <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
+                                    Click</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="dismissOnContentClick">
+                                <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
+                                    Click</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="autoClose">
+                                <label class="custom-control-label" for="autoClose">Auto Close</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
+                                <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="openinDelay" class="col-sm-6 ml-2 mb-1 col-form-label">Openin Delay</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="openinDelay" placeholder="0">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,7 +91,79 @@
                     </button>
                     <div class="collapse" id="events">
                         <div class="card card-body">
-                            Triggering Events
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="onLoadEvent">
+                                <label class="custom-control-label" for="onLoadEvent">On Load</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="onScrollEvent">
+                                <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="onClickEvent">
+                                <label class="custom-control-label" for="onClickEvent">On Click</label>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-info ml-2 mb-1" data-toggle="modal"
+                                data-target="#exampleModal">
+                                Add New Selector
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">OnClick Selector</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                                <option>By Id</option>
+                                                                <option>By ClassName</option>
+                                                                <option>Custom</option>
+                                                                <option>Link: Exacts Match</option>
+                                                                <option>Link: Contain</option>
+                                                                <option>Link: Starts With</option>
+                                                                <option>Link: End Match</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" class="form-control" placeholder="your-id">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-info">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="onHoverEvent">
+                                <label class="custom-control-label" for="onHoverEvent">On Hover</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
+                                <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="inactivityEvent">
+                                <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +175,7 @@
                     </button>
                     <div class="collapse" id="position">
                         <div class="card card-body">
-                            Display Rules
+                            POSITIONS..
                         </div>
                     </div>
                 </div>
@@ -77,7 +186,7 @@
                     </button>
                     <div class="collapse" id="effects">
                         <div class="card card-body">
-                            Display Rules
+                            EFFECTS
                         </div>
                     </div>
                 </div>
@@ -88,7 +197,7 @@
                     </button>
                     <div class="collapse" id="sizing">
                         <div class="card card-body">
-                            Display Rules
+                            SIZING
                         </div>
                     </div>
                 </div>
@@ -99,7 +208,7 @@
                     </button>
                     <div class="collapse" id="displayRules">
                         <div class="card card-body">
-                            Display Rules
+                            DISPLAY
                         </div>
                     </div>
                 </div>
@@ -111,7 +220,7 @@
                     </button>
                     <div class="collapse" id="embedCode">
                         <div class="card card-body">
-                            Display Rules
+                            EMBED CODE
                         </div>
                     </div>
                 </div>
@@ -122,7 +231,7 @@
                     </button>
                     <div class="collapse" id="triggerconfig">
                         <div class="card card-body">
-                            Trigger Configuration
+                            TRIGGER...
                         </div>
                     </div>
                 </div>
@@ -197,9 +306,9 @@
                     </div>
                 </div>
                 <div class="container text-center">
-                        <button class="btn btn-lg btn-info my-1 mx-1">New Block</button>
-                        <button class="btn btn-lg btn-info my-1 mx-1">Preview</button>
-                        <button class="btn btn-lg btn-info my-1 mx-1">Generate</button>
+                    <button class="btn btn-lg btn-info my-1 mx-1">New Block</button>
+                    <button class="btn btn-lg btn-info my-1 mx-1">Preview</button>
+                    <button class="btn btn-lg btn-info my-1 mx-1">Generate</button>
                 </div>
             </div>
         </div>
