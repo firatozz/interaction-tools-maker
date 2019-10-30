@@ -18,10 +18,10 @@
     </div>
     <hr class="col-md-10">
 
-    <div class="container col-md-10 my-3">
+    <div class="container col-md-11 my-3">
         <br>
         <div class="row">
-            <div class="col-md-3 border mr-1">
+            <div class="col-md-4 border mr-1">
                 <div class="mb-3 mt-3 border">
                     <button class="btn btn-light container" type="button" data-toggle="collapse"
                         data-target="#customizeHtml" aria-expanded="false" aria-controls="collapseExample">
@@ -63,8 +63,8 @@
                                 <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
                             </div>
                             <div class="form-group row">
-                                <label for="openinDelay" class="col-sm-6 ml-2 mb-1 col-form-label">Openin Delay</label>
-                                <div class="col-sm-4">
+                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
+                                <div class="col-6">
                                     <input type="text" class="form-control" id="openinDelay" placeholder="0">
                                 </div>
                             </div>
@@ -79,7 +79,72 @@
                     </button>
                     <div class="collapse" id="customizeCss">
                         <div class="card card-body">
-                            CUSTOMIZE CSS.
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="overlayVisible">Overlay
+                                    Visible</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="overlayVisible">
+                            </div>
+                            <div class="form-group row">
+                                <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Color</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="overlayColor" placeholder="#000">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Opacity</label>
+                                <div class="col-6">
+                                    <input type="range" class="custom-range" min="0" max="1" step="0.01"
+                                        id="overlayOpacity">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Custom Class</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="borderStyle" class="col-5 ml-2 mb-1 col-form-label">Border Style</label>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <select class="form-control" id="borderStyle">
+                                            <option>Solid</option>
+                                            <option>Dotted</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="borderColor" class="col-5 ml-2 mb-1 col-form-label">Border
+                                    Color</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="borderColor" placeholder="#000">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="borderRadiıs" class="col-5 ml-2 mb-1 col-form-label">Border
+                                    Radius</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="borderRadius" placeholder="10px">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="borderSize" class="col-5 ml-2 mb-1 col-form-label">Border
+                                    Size</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="borderSize" placeholder="1px">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showCloseButton">Show Close Button</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showCloseButton">
+                            </div>
+                            <hr>
                         </div>
                     </div>
                 </div>
@@ -237,7 +302,7 @@
                 </div>
             </div>
             <br>
-            <div class="container col-md-8 border">
+            <div class="container col-md-7 border">
                 <div class="form-row mt-3">
                     <div class="form-group col-md-3">
                         <label>Width</label>
