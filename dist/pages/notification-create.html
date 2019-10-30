@@ -19,76 +19,7 @@
     <hr class="col-md-10">
 
     <div class="container col-md-11 my-3">
-        <br>
-        <br>
-        <div class="container col-md-7 border">
-            <div class="form-row mt-3">
-                <div class="form-group col-md-3">
-                    <label>Width</label>
-                    <input type="number" min="100" class="form-control" id="widthPre" placeholder="300">
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Height</label>
-                    <input type="number" min="100" class="form-control" id="heightPre" placeholder="300">
-                </div>
-                <div class="form-group col-md-3">
-                    <label>AutoClose</label>
-                    <input type="number" min="0" class="form-control" id="autoClosePre" placeholder="0 (sn)">
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Animation</label>
-                    <select id="animation" class="form-control">
-                        <option selected value="fade">Fade</option>
-                        <option value="blur">Blur</option>
-                        <option value="bubble">Bubble</option>
-                        <option value="classic">Classic</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label>Delay</label>
-                    <input type="number" min="0" class="form-control" id="delayPre" placeholder="1 (sn)">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Cookie Expired Day Count</label>
-                    <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Show Count Page Views</label>
-                    <input type="number" min="0" value="0" class="form-control" id="showCountPageviewsPre"
-                        placeholder="0">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="imgurl">Image URL</label>
-                <input type="text" class="form-control" id="imageurlPre"
-                    value="https://firatozz.github.io/assets/img/javascript.png"
-                    placeholder="https://firatozz.github.io/assets/img/javascript.png">
-            </div>
-            <div class="form-group">
-                <label for="targetLinkPre">Target URL</label>
-                <input type="text" class="form-control" id="targetLinkPre"
-                    placeholder="https://github.com/firatozz/sweet-functional-popup">
-            </div>
-            <div class="form-row ml-4 pl-2">
-                <div class="form-group col-md-3 custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="canScrollPre">
-                    <label class="custom-control-label" for="canScrollPre">can Scroll</label>
-                </div>
-                <div class="form-group col-md-3 custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
-                    <label class="custom-control-label" for="targetOpenNewTabPre">Target Open New Tab</label>
-                </div>
-                <div class="form-group col-md-3 custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="showAsExitIntentPre">
-                    <label class="custom-control-label" for="showAsExitIntentPre">Show as Exit Intent</label>
-                </div>
-                <div class="form-group col-md-3 custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="showOncePerSessionPre">
-                    <label class="custom-control-label" for="showOncePerSessionPre">Show Once Per Session</label>
-                </div>
-            </div>
+        <div class="container col">
             <div class="container text-center">
                 <button class="btn btn-lg btn-info my-1 mx-1">New Block</button>
                 <button class="btn btn-lg btn-info my-1 mx-1">Preview</button>
@@ -97,7 +28,7 @@
         </div>
     </div>
     </div>
-    <div class="container col-10 row" style="margin: 0 auto;">
+    <div class="container col-9 row" style="margin: 0 auto;">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
@@ -117,7 +48,7 @@
                 <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
                     href="#list-triggerconfiguration" role="tab" aria-controls="settings">Trigger Configuration</a>
                 <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-embedcode" role="tab" aria-controls="settings">Embed Code</a>
+                    href="#list-cookiemanagement" role="tab" aria-controls="settings">Cookie Management</a>
             </div>
         </div>
         <div class="col-9">
@@ -126,9 +57,15 @@
                     aria-labelledby="list-home-list">
                     <div class="card card-body">
                         <div class="card card-body">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
-                                <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
+                            <div class="form-group">
+                                <label for="imgurl">Image URL</label>
+                                <input type="text" class="form-control" id="imageurlPre"
+                                    value="https://firatozz.github.io/assets/img/javascript.png"
+                                    placeholder="https://firatozz.github.io/assets/img/javascript.png">
+                            </div>
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" checked id="behaviourOnContent">
+                                <label class="custom-control-label" for="behaviourOnContent">Behaviour on Content
                                     Click</label>
                             </div>
                             <div class="form-check">
@@ -160,28 +97,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
-                            <label class="custom-control-label" for="allowPopupDismissal">Allow Popup
-                                Dismissal</label>
+                            <label class="custom-control-label" for="allowPopupDismissal">Allow Popup Dismissal</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
                             <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+
+
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="dismissOnOverlayClick">
                             <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
                                 Click</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="dismissOnContentClick">
                             <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
                                 Click</label>
                         </div>
 
                         <div class="container border">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="autoClose">
                                 <label class="custom-control-label" for="autoClose">Auto Close</label>
                             </div>
@@ -194,7 +132,7 @@
                             </div>
                         </div>
 
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
                             <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
                         </div>
@@ -208,11 +146,11 @@
                 </div>
                 <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-profile-list">
                     <div class="card card-body">
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
-                            <label class="custom-control-label col-8 ml-2 mb-1" for="overlayVisible">Overlay
-                                Visible</label>
-                            <input type="checkbox" class="custom-control-input col-4" id="overlayVisible">
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="overlayVisible">
+                            <label class="custom-control-label" for="overlayVisible">Overlay Visible</label>
                         </div>
+
                         <div class="form-group row">
                             <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
                                 Color</label>
@@ -269,11 +207,11 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
-                            <label class="custom-control-label col-8 ml-2 mb-1" for="showCloseButton">Show Close
-                                Button</label>
-                            <input type="checkbox" class="custom-control-input col-4" id="showCloseButton">
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="showCloseButton">
+                            <label class="custom-control-label" for="showCloseButton">Show Close Button</label>
                         </div>
+
                         <div class="form-group row">
                             <label for="showAfterSeconds" class="col-4 ml-2 mb-1 col-form-label">Show After</label>
                             <div class="col-8 row">
@@ -346,15 +284,15 @@
                 </div>
                 <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-messages-list">
                     <div class="card card-body">
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="onLoadEvent">
                             <label class="custom-control-label" for="onLoadEvent">On Load</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="onScrollEvent">
                             <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="onClickEvent">
                             <label class="custom-control-label" for="onClickEvent">On Click</label>
                         </div>
@@ -407,15 +345,15 @@
                         </div>
 
 
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="onHoverEvent">
                             <label class="custom-control-label" for="onHoverEvent">On Hover</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
                             <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                        <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="inactivityEvent">
                             <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
                         </div>
@@ -429,7 +367,15 @@
                 </div>
                 <div class="tab-pane fade" id="list-effects" role="tabpanel" aria-labelledby="list-settings-list">
                     <div class="card card-body">
-                        EFFECTS
+                        <div class="form-group col-6">
+                            <label>Opening Animation</label>
+                            <select id="animation" class="form-control">
+                                <option selected value="fade">Fade</option>
+                                <option value="blur">Blur</option>
+                                <option value="bubble">Bubble</option>
+                                <option value="classic">Classic</option>
+                            </select>
+                        </div>
                     </div>
 
                 </div>
@@ -450,9 +396,8 @@
                             </div>
                         </div>
                         <div class="custom-control custom-checkbox ml-2 mb-1">
-                            <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Responsive
-                                (Auto Scalable)</label>
                             <input type="checkbox" class="custom-control-input col-4" id="autoScalable">
+                            <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Auto Scalable</label>
                         </div>
                     </div>
                 </div>
@@ -461,85 +406,110 @@
                         <div class="container">
                             <h5>Devices</h5>
                             <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Show on
                                     Desktop</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                             <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="showOnMobile">Show on
                                     Mobile</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
                             </div>
                             <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="showOnTablet">Show on
                                     Tablet</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
                             </div>
                         </div>
                         <hr>
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="canScrollPre">
+                            <label class="custom-control-label" for="canScrollPre">can Scroll</label>
+                        </div>
+                        <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Geo
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="geoTargeting">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="geoTargeting">Geo
                                     Targeting</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Schedule
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="schedulePopup">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="schedulePopup">Schedule
                                     Popup</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">After X
-                                    Pages Visit</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="afterXPagesVisit">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="afterXPagesVisit">After X Pages
+                                    Visit</label>
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Referral
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="referralDetection">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="referralDetection">Referral
                                     Detection</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Spoken
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="spokenLanguage">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="spokenLanguage">Spoken
                                     Language</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="popupByDaysOfWeek">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="popupByDaysOfWeek">Popup by
                                     Days of Week</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                         <hr>
                         <div class="container">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input col-4" id="popupByCustomCookie">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="popupByCustomCookie">Popup by
                                     Custom Cookie</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
                     aria-labelledby="list-settings-list">
-                    <div class="card card-body"> TRIGGER...</div>
+                    <div class="card card-body">
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
+                            <label class="custom-control-label" for="targetOpenNewTabPre">Target Open New Tab</label>
+                        </div>
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="showAsExitIntentPre">
+                            <label class="custom-control-label" for="showAsExitIntentPre">Show as Exit Intent</label>
+                        </div>
+                        <div class="form-group col-6 custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="showOncePerSessionPre">
+                            <label class="custom-control-label" for="showOncePerSessionPre">Show Once Per
+                                Session</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="list-embedcode" role="tabpanel" aria-labelledby="list-settings-list">
-                    <div class="card card-body">EMBED CODE</div>
+                <div class="tab-pane fade" id="list-cookiemanagement" role="tabpanel"
+                    aria-labelledby="list-settings-list">
+                    <div class="card card-body">
+                        <div class="form-group col-4">
+                            <label>Cookie Expired Day Count</label>
+                            <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
