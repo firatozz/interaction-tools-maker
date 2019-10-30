@@ -30,10 +30,40 @@
 
                     <div class="collapse" id="customizeHtml">
                         <div class="card card-body">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
-                                <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
-                                    Click</label>
+                            <div class="container border">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
+                                    <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
+                                        Click</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Redirect URL
+                                    </label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">URL</label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="openinDelay"
+                                            placeholder="www.google.com">
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Copy to Clipboard
+                                    </label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Text</label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="openinDelay"
+                                            placeholder="Coupon Code...">
+                                    </div>
+                                </div>
                             </div>
                             <div class="custom-control custom-checkbox ml-2 mb-1">
                                 <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
@@ -54,10 +84,21 @@
                                 <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
                                     Click</label>
                             </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="autoClose">
-                                <label class="custom-control-label" for="autoClose">Auto Close</label>
+
+                            <div class="container border">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="autoClose">
+                                    <label class="custom-control-label" for="autoClose">Auto Close</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
+                                        Delay</label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="custom-control custom-checkbox ml-2 mb-1">
                                 <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
                                 <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
@@ -308,7 +349,7 @@
                     </button>
                     <div class="collapse" id="position">
                         <div class="card card-body">
-                            POSITIONS..
+                            POSITIONS...
                         </div>
                     </div>
                 </div>
@@ -330,18 +371,109 @@
                     </button>
                     <div class="collapse" id="sizing">
                         <div class="card card-body">
-                            SIZING
+                            <div class="form-group row">
+                                <label for="imageWidth" class="col-5 ml-2 mb-1 col-form-label">Width
+                                </label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="imageWidth" placeholder="12 px">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="imageHeight" class="col-5 ml-2 mb-1 col-form-label">Height
+                                </label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="imageHeight" placeholder="#000">
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Responsive
+                                    (Auto Scalable)</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="autoScalable">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="mb-3 border">
                     <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
                         data-target="#displayRules" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5 text-left">Display</span>
+                        <span class="h5 text-left">Display Rules</span>
                     </button>
                     <div class="collapse" id="displayRules">
                         <div class="card card-body">
-                            DISPLAY
+                            <div class="container">
+                                <h5>Devices</h5>
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Show on
+                                        Desktop</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnMobile">Show on
+                                        Mobile</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
+                                </div>
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnTablet">Show on
+                                        Tablet</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Geo
+                                        Targeting</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Schedule
+                                        Popup</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">After X
+                                        Pages Visit</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Referral
+                                        Detection</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Spoken
+                                        Language</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                                        Days of Week</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="custom-control custom-checkbox ml-2 mb-1">
+                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                                        Custom Cookie</label>
+                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
