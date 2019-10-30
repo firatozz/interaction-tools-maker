@@ -20,565 +20,530 @@
 
     <div class="container col-md-11 my-3">
         <br>
-        <div class="row">
-            <div class="col-md-4 border mr-1">
-                <div class="mb-3 mt-3 border">
-                    <button class="btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#customizeHtml" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5 text-left">General</span>
-                    </button>
-
-                    <div class="collapse" id="customizeHtml">
-                        <div class="card card-body">
-                            <div class="container border">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
-                                    <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
-                                        Click</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Redirect URL
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">URL</label>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" id="openinDelay"
-                                            placeholder="www.google.com">
-                                    </div>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
-                                        id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        Copy to Clipboard
-                                    </label>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Text</label>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" id="openinDelay"
-                                            placeholder="Coupon Code...">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
-                                <label class="custom-control-label" for="allowPopupDismissal">Allow Popup
-                                    Dismissal</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
-                                <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="dismissOnOverlayClick">
-                                <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
-                                    Click</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="dismissOnContentClick">
-                                <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
-                                    Click</label>
-                            </div>
-
-                            <div class="container border">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <input type="checkbox" class="custom-control-input" id="autoClose">
-                                    <label class="custom-control-label" for="autoClose">Auto Close</label>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
-                                        Delay</label>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
-                                <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
-                            </div>
-                            <div class="form-group row">
-                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="openinDelay" placeholder="0">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <br>
+        <div class="container col-md-7 border">
+            <div class="form-row mt-3">
+                <div class="form-group col-md-3">
+                    <label>Width</label>
+                    <input type="number" min="100" class="form-control" id="widthPre" placeholder="300">
                 </div>
-
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#customizeCss" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5 text-left">Desing</span>
-                    </button>
-                    <div class="collapse" id="customizeCss">
-                        <div class="card card-body">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="overlayVisible">Overlay
-                                    Visible</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="overlayVisible">
-                            </div>
-                            <div class="form-group row">
-                                <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                    Color</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="overlayColor" placeholder="#000">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                    Opacity</label>
-                                <div class="col-6">
-                                    <input type="range" class="custom-range" min="0" max="1" step="0.01"
-                                        id="overlayOpacity">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                    Custom Class</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="form-group row">
-                                <label for="borderStyle" class="col-5 ml-2 mb-1 col-form-label">Border Style</label>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <select class="form-control" id="borderStyle">
-                                            <option>Solid</option>
-                                            <option>Dotted</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="borderColor" class="col-5 ml-2 mb-1 col-form-label">Border
-                                    Color</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="borderColor" placeholder="#000">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="borderRadiıs" class="col-5 ml-2 mb-1 col-form-label">Border
-                                    Radius</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="borderRadius" placeholder="10px">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="borderSize" class="col-5 ml-2 mb-1 col-form-label">Border
-                                    Size</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="borderSize" placeholder="1px">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showCloseButton">Show Close
-                                    Button</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="showCloseButton">
-                            </div>
-                            <div class="form-group row">
-                                <label for="showAfterSeconds" class="col-4 ml-2 mb-1 col-form-label">Show After</label>
-                                <div class="col-8 row">
-                                    <input type="text" class="form-control col-6" id="showAfterSeconds" placeholder="0">
-                                    <label for="showAfterSeconds" class="col-6 col-form-label">seconds</label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="buttonImage" class="col-5 ml-2 mb-1 col-form-label">Button Image
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="buttonImage" placeholder="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="buttonPosition" class="col-5 ml-2 mb-1 col-form-label">Button
-                                    Position</label>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <select class="form-control" id="buttonPosition">
-                                            <option>Top Right</option>
-                                            <option>Top Left</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-6">
-                                    <label for="buttonPosAttr1" class="ml-2 mb-1 col-form-label">Position 1.
-                                        Attr</label>
-                                    <input type="text" class="form-control" id="buttonPosAttr1" placeholder="">
-                                </div>
-                                <div class="form-group col-6">
-                                    <label for="buttonPosAttr2" class="ml-2 mb-1 col-form-label">Position 2.
-                                        Attr</label>
-                                    <input type="text" class="form-control" id="buttonPosAttr2" placeholder="">
-                                </div>
-                                <div class="form-group col-6">
-                                    <label for="closeButtonWidth" class="ml-2 mb-1 col-form-label">Width</label>
-                                    <input type="text" class="form-control" id="closeButtonWidth" placeholder="">
-                                </div>
-                                <div class="form-group col-6">
-                                    <label for="closeButtonHeight" class="ml-2 mb-1 col-form-label">Height</label>
-                                    <input type="text" class="form-control" id="closeButtonHeight" placeholder="">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="form-group row">
-                                <label for="shadowSpread" class="col-5 ml-2 mb-1 col-form-label">Shadow Spread
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="shadowSpread" placeholder="1px">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="shadowBlur" class="col-5 ml-2 mb-1 col-form-label">Shadow Blur
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="shadowBlur" placeholder="12 px">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="shadowColor" class="col-5 ml-2 mb-1 col-form-label">Shadow Color
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="shadowColor" placeholder="#000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group col-md-3">
+                    <label>Height</label>
+                    <input type="number" min="100" class="form-control" id="heightPre" placeholder="300">
                 </div>
-
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#events" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Events</span>
-                    </button>
-                    <div class="collapse" id="events">
-                        <div class="card card-body">
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="onLoadEvent">
-                                <label class="custom-control-label" for="onLoadEvent">On Load</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="onScrollEvent">
-                                <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="onClickEvent">
-                                <label class="custom-control-label" for="onClickEvent">On Click</label>
-                            </div>
-
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-info ml-2 mb-1" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Add New Selector
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">OnClick Selector</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-4">
-                                                        <div class="form-group">
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                                <option>By Id</option>
-                                                                <option>By ClassName</option>
-                                                                <option>Custom</option>
-                                                                <option>Link: Exacts Match</option>
-                                                                <option>Link: Contain</option>
-                                                                <option>Link: Starts With</option>
-                                                                <option>Link: End Match</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-8">
-                                                        <input type="text" class="form-control" placeholder="your-id">
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-info">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="onHoverEvent">
-                                <label class="custom-control-label" for="onHoverEvent">On Hover</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
-                                <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input" id="inactivityEvent">
-                                <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group col-md-3">
+                    <label>AutoClose</label>
+                    <input type="number" min="0" class="form-control" id="autoClosePre" placeholder="0 (sn)">
                 </div>
-
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#position" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Position</span>
-                    </button>
-                    <div class="collapse" id="position">
-                        <div class="card card-body">
-                            POSITIONS...
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#effects" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Effects</span>
-                    </button>
-                    <div class="collapse" id="effects">
-                        <div class="card card-body">
-                            EFFECTS
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#sizing" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Sizing</span>
-                    </button>
-                    <div class="collapse" id="sizing">
-                        <div class="card card-body">
-                            <div class="form-group row">
-                                <label for="imageWidth" class="col-5 ml-2 mb-1 col-form-label">Width
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="imageWidth" placeholder="12 px">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="imageHeight" class="col-5 ml-2 mb-1 col-form-label">Height
-                                </label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="imageHeight" placeholder="#000">
-                                </div>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Responsive
-                                    (Auto Scalable)</label>
-                                <input type="checkbox" class="custom-control-input col-4" id="autoScalable">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#displayRules" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5 text-left">Display Rules</span>
-                    </button>
-                    <div class="collapse" id="displayRules">
-                        <div class="card card-body">
-                            <div class="container">
-                                <h5>Devices</h5>
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Show on
-                                        Desktop</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnMobile">Show on
-                                        Mobile</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
-                                </div>
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnTablet">Show on
-                                        Tablet</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Geo
-                                        Targeting</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Schedule
-                                        Popup</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">After X
-                                        Pages Visit</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Referral
-                                        Detection</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Spoken
-                                        Language</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
-                                        Days of Week</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="container">
-                                <div class="custom-control custom-checkbox ml-2 mb-1">
-                                    <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
-                                        Custom Cookie</label>
-                                    <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#embedCode" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Embed Code</span>
-                    </button>
-                    <div class="collapse" id="embedCode">
-                        <div class="card card-body">
-                            EMBED CODE
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 border">
-                    <button class="col-md-12 btn btn-light container" type="button" data-toggle="collapse"
-                        data-target="#triggerconfig" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="h5">Trigger Configuration</span>
-                    </button>
-                    <div class="collapse" id="triggerconfig">
-                        <div class="card card-body">
-                            TRIGGER...
-                        </div>
-                    </div>
+                <div class="form-group col-md-3">
+                    <label>Animation</label>
+                    <select id="animation" class="form-control">
+                        <option selected value="fade">Fade</option>
+                        <option value="blur">Blur</option>
+                        <option value="bubble">Bubble</option>
+                        <option value="classic">Classic</option>
+                    </select>
                 </div>
             </div>
-            <br>
-            <div class="container col-md-7 border">
-                <div class="form-row mt-3">
-                    <div class="form-group col-md-3">
-                        <label>Width</label>
-                        <input type="number" min="100" class="form-control" id="widthPre" placeholder="300">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Height</label>
-                        <input type="number" min="100" class="form-control" id="heightPre" placeholder="300">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>AutoClose</label>
-                        <input type="number" min="0" class="form-control" id="autoClosePre" placeholder="0 (sn)">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Animation</label>
-                        <select id="animation" class="form-control">
-                            <option selected value="fade">Fade</option>
-                            <option value="blur">Blur</option>
-                            <option value="bubble">Bubble</option>
-                            <option value="classic">Classic</option>
-                        </select>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Delay</label>
+                    <input type="number" min="0" class="form-control" id="delayPre" placeholder="1 (sn)">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Cookie Expired Day Count</label>
+                    <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Show Count Page Views</label>
+                    <input type="number" min="0" value="0" class="form-control" id="showCountPageviewsPre"
+                        placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imgurl">Image URL</label>
+                <input type="text" class="form-control" id="imageurlPre"
+                    value="https://firatozz.github.io/assets/img/javascript.png"
+                    placeholder="https://firatozz.github.io/assets/img/javascript.png">
+            </div>
+            <div class="form-group">
+                <label for="targetLinkPre">Target URL</label>
+                <input type="text" class="form-control" id="targetLinkPre"
+                    placeholder="https://github.com/firatozz/sweet-functional-popup">
+            </div>
+            <div class="form-row ml-4 pl-2">
+                <div class="form-group col-md-3 custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="canScrollPre">
+                    <label class="custom-control-label" for="canScrollPre">can Scroll</label>
+                </div>
+                <div class="form-group col-md-3 custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
+                    <label class="custom-control-label" for="targetOpenNewTabPre">Target Open New Tab</label>
+                </div>
+                <div class="form-group col-md-3 custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="showAsExitIntentPre">
+                    <label class="custom-control-label" for="showAsExitIntentPre">Show as Exit Intent</label>
+                </div>
+                <div class="form-group col-md-3 custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="showOncePerSessionPre">
+                    <label class="custom-control-label" for="showOncePerSessionPre">Show Once Per Session</label>
+                </div>
+            </div>
+            <div class="container text-center">
+                <button class="btn btn-lg btn-info my-1 mx-1">New Block</button>
+                <button class="btn btn-lg btn-info my-1 mx-1">Preview</button>
+                <button class="btn btn-lg btn-info my-1 mx-1">Generate</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container col-10 row" style="margin: 0 auto;">
+        <div class="col-3">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                    href="#list-general" role="tab" aria-controls="home">General</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                    href="#list-design" role="tab" aria-controls="profile">Design</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                    href="#list-events" role="tab" aria-controls="messages">Events</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-position" role="tab" aria-controls="settings">Position</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-effects" role="tab" aria-controls="settings">Effects</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-sizing" role="tab" aria-controls="settings">Sizing</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-displayrules" role="tab" aria-controls="settings">Display Rules</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-triggerconfiguration" role="tab" aria-controls="settings">Trigger Configuration</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                    href="#list-embedcode" role="tab" aria-controls="settings">Embed Code</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-general" role="tabpanel"
+                    aria-labelledby="list-home-list">
+                    <div class="card card-body">
+                        <div class="card card-body">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="behaviorOnContentClick">
+                                <label class="custom-control-label" for="behaviorOnContentClick">Behavior on Content
+                                    Click</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Redirect URL
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">URL</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="openinDelay"
+                                        placeholder="www.google.com">
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Copy to Clipboard
+                                </label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Text</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="openinDelay"
+                                        placeholder="Coupon Code...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
+                            <label class="custom-control-label" for="allowPopupDismissal">Allow Popup
+                                Dismissal</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
+                            <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="dismissOnOverlayClick">
+                            <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
+                                Click</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="dismissOnContentClick">
+                            <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
+                                Click</label>
+                        </div>
+
+                        <div class="container border">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <input type="checkbox" class="custom-control-input" id="autoClose">
+                                <label class="custom-control-label" for="autoClose">Auto Close</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
+                                    Delay</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
+                            <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
+                        </div>
+                        <div class="form-group row">
+                            <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="openinDelay" placeholder="0">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label>Delay</label>
-                        <input type="number" min="0" class="form-control" id="delayPre" placeholder="1 (sn)">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Cookie Expired Day Count</label>
-                        <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Show Count Page Views</label>
-                        <input type="number" min="0" value="0" class="form-control" id="showCountPageviewsPre"
-                            placeholder="0">
+                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="card card-body">
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <label class="custom-control-label col-8 ml-2 mb-1" for="overlayVisible">Overlay
+                                Visible</label>
+                            <input type="checkbox" class="custom-control-input col-4" id="overlayVisible">
+                        </div>
+                        <div class="form-group row">
+                            <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                Color</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="overlayColor" placeholder="#000">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                Opacity</label>
+                            <div class="col-6">
+                                <input type="range" class="custom-range" min="0" max="1" step="0.01"
+                                    id="overlayOpacity">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                Custom Class</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="borderStyle" class="col-5 ml-2 mb-1 col-form-label">Border Style</label>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <select class="form-control" id="borderStyle">
+                                        <option>Solid</option>
+                                        <option>Dotted</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="borderColor" class="col-5 ml-2 mb-1 col-form-label">Border
+                                Color</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="borderColor" placeholder="#000">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="borderRadiıs" class="col-5 ml-2 mb-1 col-form-label">Border
+                                Radius</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="borderRadius" placeholder="10px">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="borderSize" class="col-5 ml-2 mb-1 col-form-label">Border
+                                Size</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="borderSize" placeholder="1px">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <label class="custom-control-label col-8 ml-2 mb-1" for="showCloseButton">Show Close
+                                Button</label>
+                            <input type="checkbox" class="custom-control-input col-4" id="showCloseButton">
+                        </div>
+                        <div class="form-group row">
+                            <label for="showAfterSeconds" class="col-4 ml-2 mb-1 col-form-label">Show After</label>
+                            <div class="col-8 row">
+                                <input type="text" class="form-control col-6" id="showAfterSeconds" placeholder="0">
+                                <label for="showAfterSeconds" class="col-6 col-form-label">seconds</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="buttonImage" class="col-5 ml-2 mb-1 col-form-label">Button Image
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="buttonImage" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="buttonPosition" class="col-5 ml-2 mb-1 col-form-label">Button
+                                Position</label>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <select class="form-control" id="buttonPosition">
+                                        <option>Top Right</option>
+                                        <option>Top Left</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="buttonPosAttr1" class="ml-2 mb-1 col-form-label">Position 1.
+                                    Attr</label>
+                                <input type="text" class="form-control" id="buttonPosAttr1" placeholder="">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="buttonPosAttr2" class="ml-2 mb-1 col-form-label">Position 2.
+                                    Attr</label>
+                                <input type="text" class="form-control" id="buttonPosAttr2" placeholder="">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="closeButtonWidth" class="ml-2 mb-1 col-form-label">Width</label>
+                                <input type="text" class="form-control" id="closeButtonWidth" placeholder="">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="closeButtonHeight" class="ml-2 mb-1 col-form-label">Height</label>
+                                <input type="text" class="form-control" id="closeButtonHeight" placeholder="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group row">
+                            <label for="shadowSpread" class="col-5 ml-2 mb-1 col-form-label">Shadow Spread
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="shadowSpread" placeholder="1px">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="shadowBlur" class="col-5 ml-2 mb-1 col-form-label">Shadow Blur
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="shadowBlur" placeholder="12 px">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="shadowColor" class="col-5 ml-2 mb-1 col-form-label">Shadow Color
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="shadowColor" placeholder="#000">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="imgurl">Image URL</label>
-                    <input type="text" class="form-control" id="imageurlPre"
-                        value="https://firatozz.github.io/assets/img/javascript.png"
-                        placeholder="https://firatozz.github.io/assets/img/javascript.png">
+                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div class="card card-body">
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="onLoadEvent">
+                            <label class="custom-control-label" for="onLoadEvent">On Load</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="onScrollEvent">
+                            <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="onClickEvent">
+                            <label class="custom-control-label" for="onClickEvent">On Click</label>
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-info ml-2 mb-1" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Add New Selector
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">OnClick Selector</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>By Id</option>
+                                                            <option>By ClassName</option>
+                                                            <option>Custom</option>
+                                                            <option>Link: Exacts Match</option>
+                                                            <option>Link: Contain</option>
+                                                            <option>Link: Starts With</option>
+                                                            <option>Link: End Match</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-8">
+                                                    <input type="text" class="form-control" placeholder="your-id">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-info">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="onHoverEvent">
+                            <label class="custom-control-label" for="onHoverEvent">On Hover</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
+                            <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <input type="checkbox" class="custom-control-input" id="inactivityEvent">
+                            <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="targetLinkPre">Target URL</label>
-                    <input type="text" class="form-control" id="targetLinkPre"
-                        placeholder="https://github.com/firatozz/sweet-functional-popup">
+                <div class="tab-pane fade" id="list-position" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card card-body">
+                        POSITON
+                    </div>
+
                 </div>
-                <div class="form-row ml-4 pl-2">
-                    <div class="form-group col-md-3 custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="canScrollPre">
-                        <label class="custom-control-label" for="canScrollPre">can Scroll</label>
+                <div class="tab-pane fade" id="list-effects" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card card-body">
+                        EFFECTS
                     </div>
-                    <div class="form-group col-md-3 custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
-                        <label class="custom-control-label" for="targetOpenNewTabPre">Target Open New Tab</label>
-                    </div>
-                    <div class="form-group col-md-3 custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="showAsExitIntentPre">
-                        <label class="custom-control-label" for="showAsExitIntentPre">Show as Exit Intent</label>
-                    </div>
-                    <div class="form-group col-md-3 custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="showOncePerSessionPre">
-                        <label class="custom-control-label" for="showOncePerSessionPre">Show Once Per Session</label>
+
+                </div>
+                <div class="tab-pane fade" id="list-sizing" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card card-body">
+                        <div class="form-group row">
+                            <label for="imageWidth" class="col-5 ml-2 mb-1 col-form-label">Width
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="imageWidth" placeholder="12 px">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="imageHeight" class="col-5 ml-2 mb-1 col-form-label">Height
+                            </label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="imageHeight" placeholder="#000">
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox ml-2 mb-1">
+                            <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Responsive
+                                (Auto Scalable)</label>
+                            <input type="checkbox" class="custom-control-input col-4" id="autoScalable">
+                        </div>
                     </div>
                 </div>
-                <div class="container text-center">
-                    <button class="btn btn-lg btn-info my-1 mx-1">New Block</button>
-                    <button class="btn btn-lg btn-info my-1 mx-1">Preview</button>
-                    <button class="btn btn-lg btn-info my-1 mx-1">Generate</button>
+                <div class="tab-pane fade" id="list-displayrules" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card card-body">
+                        <div class="container">
+                            <h5>Devices</h5>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Show on
+                                    Desktop</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnMobile">Show on
+                                    Mobile</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnTablet">Show on
+                                    Tablet</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Geo
+                                    Targeting</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Schedule
+                                    Popup</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">After X
+                                    Pages Visit</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Referral
+                                    Detection</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Spoken
+                                    Language</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                                    Days of Week</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="custom-control custom-checkbox ml-2 mb-1">
+                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Popup by
+                                    Custom Cookie</label>
+                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
+                    aria-labelledby="list-settings-list">
+                    <div class="card card-body"> TRIGGER...</div>
+                </div>
+                <div class="tab-pane fade" id="list-embedcode" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card card-body">EMBED CODE</div>
                 </div>
             </div>
         </div>
     </div>
-
     </div>
     <!-- Output -->
     <br><br>
