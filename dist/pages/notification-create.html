@@ -32,29 +32,31 @@
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
-                    href="#list-general" role="tab" aria-controls="home">General</a>
-                <a class="list-group-item list-group-item-action" id="list-
-                -list" data-toggle="list" href="#list-design" role="tab" aria-controls="profile">Design</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
-                    href="#list-events" role="tab" aria-controls="messages">Events</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-position" role="tab" aria-controls="settings">Position</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-effects" role="tab" aria-controls="settings">Effects</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-sizing" role="tab" aria-controls="settings">Sizing</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-displayrules" role="tab" aria-controls="settings">Display Rules</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-triggerconfiguration" role="tab" aria-controls="settings">Trigger Configuration</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-cookiemanagement" role="tab" aria-controls="settings">Cookie Management</a>
+                    href="#list-general" role="tab" aria-controls="general">General</a>
+                <a class="list-group-item list-group-item-action" id="list-design
+                -list" data-toggle="list" href="#list-design" role="tab" aria-controls="design">Design</a>
+                <a class="list-group-item list-group-item-action" id="list-events-list" data-toggle="list"
+                    href="#list-events" role="tab" aria-controls="events">Events</a>
+                <a class="list-group-item list-group-item-action" id="list-position-list" data-toggle="list"
+                    href="#list-position" role="tab" aria-controls="position">Position</a>
+                <a class="list-group-item list-group-item-action" id="list-effects-list" data-toggle="list"
+                    href="#list-effects" role="tab" aria-controls="effects">Effects</a>
+                <a class="list-group-item list-group-item-action" id="list-sizing-list" data-toggle="list"
+                    href="#list-sizing" role="tab" aria-controls="sizing">Sizing</a>
+                <a class="list-group-item list-group-item-action" id="list-displayrules-list" data-toggle="list"
+                    href="#list-displayrules" role="tab" aria-controls="displayrules">Display Rules</a>
+                <a class="list-group-item list-group-item-action" id="list-triggerconfiguration-list" data-toggle="list"
+                    href="#list-triggerconfiguration" role="tab" aria-controls="triggerconfiguration">Trigger
+                    Configuration</a>
+                <a class="list-group-item list-group-item-action" id="list-cookiemanagement-list" data-toggle="list"
+                    href="#list-cookiemanagement" role="tab" aria-controls="cookiemanagement">Cookie Management</a>
             </div>
         </div>
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
+
                 <div class="tab-pane fade show active" id="list-general" role="tabpanel"
-                    aria-labelledby="list-home-list">
+                    aria-labelledby="list-general-list">
                     <div class="card card-body">
                         <div class="card card-body">
                             <div class="form-group">
@@ -68,12 +70,9 @@
                                 <label class="custom-control-label" for="behaviourOnContent">Behaviour on Content
                                     Click</label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                    value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Redirect URL
-                                </label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">URL</label>
                             </div>
                             <div class="form-group row">
                                 <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">URL</label>
@@ -82,12 +81,9 @@
                                         placeholder="www.google.com">
                                 </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                    value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Copy to Clipboard
-                                </label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Copy to Clipboard</label>
                             </div>
                             <div class="form-group row">
                                 <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Text</label>
@@ -144,7 +140,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-profile-list">
+
+                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
                     <div class="card card-body">
                         <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="overlayVisible">
@@ -282,7 +279,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-messages-list">
+
+                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list">
                     <div class="card card-body">
                         <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="onLoadEvent">
@@ -359,13 +357,73 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="list-position" role="tabpanel" aria-labelledby="list-settings-list">
+
+                <div class="tab-pane fade" id="list-position" role="tabpanel" aria-labelledby="list-position-list">
                     <div class="card card-body">
-                        POSITON TEST..
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="radioFixed" name="customRadio" class="custom-control-input" checked>
+                                    <label class="custom-control-label" for="radioFixed">Fixed</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="list-group">
+                                    <div class="row">
+                                        <button type="button" class="col-4 list-group-item list-group-item-action">Top
+                                            Left</button>
+                                        <button type="button" class="col-4 list-group-item list-group-item-action">Top
+                                            Center</button>
+                                        <button type="button" class="col-4 list-group-item list-group-item-action">Top
+                                            Right</button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action">Middle Left</button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action active">Center </button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action">Middle Right</button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action">Bottom Left</button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action">Botton Center</button>
+                                        <button type="button"
+                                            class="col-4 list-group-item list-group-item-action">Bottom Right</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="radioFixed2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="radioFixed2">Custom</label>
+                        </div>
+                        <div class="row">
+                                <div class="form-group col-6 mt-3 row">
+                                    <label for="posTop" class="ml-2 mb-1 col-form-label col-3">Top</label>
+                                    <input type="text" class="form-control col-6 ml-2" id="posTop" placeholder="">
+                                    <label class="col-form-label ml-2" for="">px</label>
+                                </div>
+                                <div class="form-group col-6 mt-3 row">
+                                    <label for="posLeft" class="ml-2 mb-1 col-form-label col-3">Left</label>
+                                    <input type="text" class="form-control col-6 ml-2" id="posLeft" placeholder="">
+                                    <label class="col-form-label ml-2" for="">px</label>
+                                </div>
+                                <div class="form-group col-6 mt-3 row">
+                                    <label for="posRight" class="ml-2 mb-1 col-form-label col-3">Right</label>
+                                    <input type="text" class="form-control col-6 ml-2" id="posRight" placeholder="">
+                                    <label class="col-form-label ml-2" for="">px</label>
+                                </div>
+                                <div class="form-group col-6 mt-3 row">
+                                    <label for="posBottom" class="ml-2 mb-1 col-form-label col-3">Bottom</label>
+                                    <input type="text" class="form-control col-6 ml-2" id="posBottom" placeholder="">
+                                    <label class="col-form-label ml-2" for="">px</label>
+                                </div>
+                            </div>
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="list-effects" role="tabpanel" aria-labelledby="list-settings-list">
+
+                <div class="tab-pane fade" id="list-effects" role="tabpanel" aria-labelledby="list-effects-list">
                     <div class="card card-body">
                         <div class="form-group col-6">
                             <label>Opening Animation</label>
@@ -379,7 +437,8 @@
                     </div>
 
                 </div>
-                <div class="tab-pane fade" id="list-sizing" role="tabpanel" aria-labelledby="list-settings-list">
+
+                <div class="tab-pane fade" id="list-sizing" role="tabpanel" aria-labelledby="list-sizing-list">
                     <div class="card card-body">
                         <div class="form-group row">
                             <label for="imageWidth" class="col-5 ml-2 mb-1 col-form-label">Width
@@ -401,7 +460,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="list-displayrules" role="tabpanel" aria-labelledby="list-settings-list">
+
+                <div class="tab-pane fade" id="list-displayrules" role="tabpanel"
+                    aria-labelledby="list-displayrules-list">
                     <div class="card card-body">
                         <div class="container">
                             <h5>Devices</h5>
@@ -484,8 +545,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
-                    aria-labelledby="list-settings-list">
+                    aria-labelledby="list-triggerconfiguration-list">
                     <div class="card card-body">
                         <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
@@ -502,8 +564,9 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="tab-pane fade" id="list-cookiemanagement" role="tabpanel"
-                    aria-labelledby="list-settings-list">
+                    aria-labelledby="list-cookiemanagement-list">
                     <div class="card card-body">
                         <div class="form-group col-4">
                             <label>Cookie Expired Day Count</label>
@@ -511,6 +574,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
