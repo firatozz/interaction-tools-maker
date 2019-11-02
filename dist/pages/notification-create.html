@@ -28,7 +28,7 @@
         </div>
     </div>
     </div>
-    <div class="container col-9 row" style="margin: 0 auto;">
+    <div class="container col-9 row m-auto">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
                 <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
@@ -514,19 +514,16 @@
             </div>
         </div>
     </div>
-    </div>
+
     <!-- Output -->
     <br><br>
     <hr class="container col-md-10">
     <div class="container col-md-8">
         <h2>Output:</h2>
         <pre>
-            <code class="language-html">
-                    &ltscript type="text/javascript" src="../scripts/sweetFunctionalPopup.min.js">&lt/script&gt
-            </code>
-        </pre>
-        <pre>
             <code class="language-js" id="code-section">
+                    &ltscript>
+
                     var popUp1 = new sweetFunctionalPopup();
                     popUp1.setOptions({
                         width: 300,
@@ -534,6 +531,8 @@
                         animation: "fade",
                         transformDefault: "scaleX(1)"
                     });
+
+                    &lt/script&gt
             </code>
         </pre>
     </div>
@@ -541,7 +540,7 @@
     <footer class="footer mt-5 py-3" style="background: #eee;">
         <div class="container">
             <div class="row">
-                <a class="col-md-6 text-muted" href="https://github.com/firatozz/interaction-tool-makler"
+                <a class="col-md-6 text-muted" href="https://github.com/firatozz/interaction-tools-maker"
                     target="_blank">Interaction Tool Maker Documentation</a>
                 <br>
                 <a class="col-md-6 text-muted text-right" href="https://github.com/firatozz/"
