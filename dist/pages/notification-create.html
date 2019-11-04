@@ -58,84 +58,95 @@
                 <div class="tab-pane fade show active" id="list-general" role="tabpanel"
                     aria-labelledby="list-general-list">
                     <div class="card card-body">
-                        <div class="card card-body">
-                            <div class="form-group">
+
+                        <div class="card card-body  mb-3">
+                            <div class="form-group container">
                                 <label for="imgurl">Image URL</label>
                                 <input type="text" class="form-control" id="imageurlPre"
                                     value="https://firatozz.github.io/assets/img/javascript.png"
                                     placeholder="https://firatozz.github.io/assets/img/javascript.png">
                             </div>
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" checked id="behaviourOnContent">
-                                <label class="custom-control-label" for="behaviourOnContent">Behaviour on Content
-                                    Click</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio"  id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                                <label class="custom-control-label" for="customRadio1">URL</label>
-                            </div>
-                            <div class="form-group row">
-                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">URL</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="openinDelay"
-                                        placeholder="www.google.com">
+                            <div class="form-group container">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" checked id="behaviourOnContent">
+                                    <label class="custom-control-label" for="behaviourOnContent">Behaviour on Content
+                                        Click</label>
                                 </div>
                             </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Copy to Clipboard</label>
-                            </div>
-                            <div class="form-group row">
-                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Text</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="openinDelay"
+                            <div class="container row">
+                                <div class="form-group col-6">
+                                    <div class="custom-control custom-radio mb-2">
+                                        <input type="radio" checked id="customRadio1" name="behaviourOnClick"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1">URL</label>
+                                    </div>
+                                    <input type="text" class="form-control mb-1" id="urlTarget"
+                                        placeholder="www.google.com">
+                                </div>
+                                <div class="form-group col-6">
+                                    <div class="custom-control custom-radio mb-2">
+                                        <input type="radio" id="customRadio2" name="behaviourOnClick"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2">Copy to Clipboard</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="copyCouponCode"
                                         placeholder="Coupon Code...">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
-                            <label class="custom-control-label" for="allowPopupDismissal">Allow Popup Dismissal</label>
-                        </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
-                            <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
-                        </div>
 
-
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="dismissOnOverlayClick">
-                            <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
-                                Click</label>
-                        </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="dismissOnContentClick">
-                            <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
-                                Click</label>
-                        </div>
-
-                        <div class="container border">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="autoClose">
-                                <label class="custom-control-label" for="autoClose">Auto Close</label>
-                            </div>
-                            <div class="form-group row">
-                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
-                                    Delay</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
+                        <div class="card card-body  mb-3">
+                            <div class="form-group container">
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="autoClose">
+                                    <label class="custom-control-label" for="autoClose">Auto Close</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
+                                        Delay</label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
-                            <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
+                        <div class="card card-body mb-3">
+                            <div class="container row">
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="allowPopupDismissal">
+                                    <label class="custom-control-label" for="allowPopupDismissal">Allow Popup
+                                        Dismissal</label>
+                                </div>
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="dismissOnEsc">
+                                    <label class="custom-control-label" for="dismissOnEsc">Dismiss on ESC</label>
+                                </div>
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" checked class="custom-control-input"
+                                        id="dismissOnOverlayClick">
+                                    <label class="custom-control-label" for="dismissOnOverlayClick">Dismiss on Overlay
+                                        Click</label>
+                                </div>
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" checked class="custom-control-input"
+                                        id="dismissOnContentClick">
+                                    <label class="custom-control-label" for="dismissOnContentClick">Dismiss on Content
+                                        Click</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="openinDelay" placeholder="0">
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
+                                <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
+                            </div>
+                            <div class="form-group row">
+                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="openinDelay" placeholder="0">
+                                </div>
                             </div>
                         </div>
                     </div>
