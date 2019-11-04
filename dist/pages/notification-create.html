@@ -43,10 +43,11 @@
                     href="#list-effects" role="tab" aria-controls="effects">Effects</a>
                 <a class="list-group-item list-group-item-action" id="list-sizing-list" data-toggle="list"
                     href="#list-sizing" role="tab" aria-controls="sizing">Sizing</a>
-                <a class="list-group-item list-group-item-action" id="list-displayrules-list" data-toggle="list"
-                    href="#list-displayrules" role="tab" aria-controls="displayrules">Display Rules</a>
                 <a class="list-group-item list-group-item-action" id="list-triggerconfiguration-list" data-toggle="list"
                     href="#list-triggerconfiguration" role="tab" aria-controls="triggerconfiguration">Trigger
+                    Configuration</a>
+                <a class="list-group-item list-group-item-action" id="list-displayconfiguration-list" data-toggle="list"
+                    href="#list-displayconfiguration" role="tab" aria-controls="displayconfiguration">Display
                     Configuration</a>
                 <a class="list-group-item list-group-item-action" id="list-cookiemanagement-list" data-toggle="list"
                     href="#list-cookiemanagement" role="tab" aria-controls="cookiemanagement">Cookie Management</a>
@@ -55,7 +56,7 @@
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane" id="list-general" role="tabpanel" aria-labelledby="list-general-list">
+                <div class="tab-pane show active" id="list-general" role="tabpanel" aria-labelledby="list-general-list">
                     <div class="card card-body">
 
                         <div class="card card-body  mb-3">
@@ -151,8 +152,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-design" role="tabpanel"
-                    aria-labelledby="list-design-list">
+                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
                     <div class="card card-body">
 
                         <div class="card card-body mb-3">
@@ -275,81 +275,211 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list">
+                <div class="tab-pane fade" id="list-events" role="tabpanel"
+                    aria-labelledby="list-events-list">
                     <div class="card card-body">
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="onLoadEvent">
-                            <label class="custom-control-label" for="onLoadEvent">On Load</label>
-                        </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="onScrollEvent">
-                            <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
-                        </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="onClickEvent">
-                            <label class="custom-control-label" for="onClickEvent">On Click</label>
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" checked class="custom-control-input" id="onLoadEvent">
+                                    <label class="custom-control-label" for="onLoadEvent">On Load</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openingDelay" class="col-form-label col-4">Opening Delay</label>
+                                    <input type="text" class="form-control col-4" id="openingDelay" placeholder="5">
+                                    <label for="openingDelaySeconds" class="col-form-label col-4">seconds</label>
+                                </div>
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="onLoadEventRepetitive">
+                                    <label class="custom-control-label" for="onLoadEventRepetitive">Repetitive</label>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-info ml-2 mb-1" data-toggle="modal"
-                            data-target="#exampleModal">
-                            Add New Selector
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">OnClick Selector</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                        <div class="card card-body mb-3">
+                            <div class="form-group container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="onScrollEvent">
+                                    <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="openingAfterPos" class="col-form-label col-4">After</label>
+                                    <input type="text" class="form-control col-4" id="openingAfterPos" placeholder="5">
+                                    <div class="form-group col-4">
+                                        <select class="form-control" id="openingAfterPosSelected">
+                                            <option>px</option>
+                                            <option>%</option>
+                                        </select>
                                     </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <div class="form-group">
-                                                        <select class="form-control" id="exampleFormControlSelect1">
-                                                            <option>By Id</option>
-                                                            <option>By ClassName</option>
-                                                            <option>Custom</option>
-                                                            <option>Link: Exacts Match</option>
-                                                            <option>Link: Contain</option>
-                                                            <option>Link: Starts With</option>
-                                                            <option>Link: End Match</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-8">
-                                                    <input type="text" class="form-control" placeholder="your-id">
-                                                </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="onScrollEventOpeninDelay" class="col-form-label col-4">Opening
+                                        Delay</label>
+                                    <input type="text" class="form-control col-4" id="onScrollEventOpeninDelay"
+                                        placeholder="5">
+                                    <label for="onScrollEventOpeninDelaySeconds"
+                                        class="col-form-label col-4">seconds</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-body mb-3">
+                            <div class="container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="onClickEvent">
+                                    <label class="custom-control-label" for="onClickEvent">On Click</label>
+                                </div>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#onClickEventModal">
+                                    Add New Selector
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="onClickEventModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="onClickEventModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="onClickEventModalLabel">OnClick Selector
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                             </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-info">Save changes</button>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form-group">
+                                                                <select class="form-control"
+                                                                    id="onClickEventFormControlSelect">
+                                                                    <option>By Id</option>
+                                                                    <option>By ClassName</option>
+                                                                    <option>Custom</option>
+                                                                    <option>Link: Exacts Match</option>
+                                                                    <option>Link: Contain</option>
+                                                                    <option>Link: Starts With</option>
+                                                                    <option>Link: End Match</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="your-id">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-info">Save changes</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="card card-body mb-3">
+                            <div class="container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="onHoverEvent">
+                                    <label class="custom-control-label" for="onHoverEvent">On Hover</label>
+                                </div>
 
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="onHoverEvent">
-                            <label class="custom-control-label" for="onHoverEvent">On Hover</label>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-info" data-toggle="modal"
+                                    data-target="#onHoverEventModal">
+                                    Add New Selector
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="onHoverEventModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="onHoverEventModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="onHoverEventModalLabel">OnHover Selector
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form-group">
+                                                                <select class="form-control"
+                                                                    id="onHoverEventModalFormControlSelect">
+                                                                    <option>By Id</option>
+                                                                    <option>By ClassName</option>
+                                                                    <option>Custom</option>
+                                                                    <option>Link: Exacts Match</option>
+                                                                    <option>Link: Contain</option>
+                                                                    <option>Link: Starts With</option>
+                                                                    <option>Link: End Match</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="your-id">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-info">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
-                            <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="exitIntentEvent">
+                                    <label class="custom-control-label" for="exitIntentEvent">Exit Intent</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="exitIntentEventOpeningDelay" class="col-form-label col-4">Opening
+                                        Delay</label>
+                                    <input type="text" class="form-control col-4" id="exitIntentEventOpeningDelay"
+                                        placeholder="0">
+                                    <label for="exitIntentEventOpeningDelaySeconds"
+                                        class="col-form-label col-4">seconds</label>
+                                </div>
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="exitIntentEventMobile">
+                                    <label class="custom-control-label" for="exitIntentEventMobile">Mobile</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="inactivityEvent">
-                            <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group container">
+                                <div class="form-group custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="inactivityEvent">
+                                    <label class="custom-control-label" for="inactivityEvent">Inactivity</label>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inactivityEventWaitingTime" class="col-form-label col-4">After</label>
+                                    <input type="text" class="form-control col-4" id="inactivityEventWaitingTime"
+                                        placeholder="15">
+                                    <label for="inactivityEventWaitingTimeSeconds"
+                                        class="col-form-label col-4">seconds</label>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -457,8 +587,8 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-displayrules" role="tabpanel"
-                    aria-labelledby="list-displayrules-list">
+                <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
+                    aria-labelledby="list-triggerconfiguration-list">
                     <div class="card card-body">
                         <div class="container">
                             <h5>Devices</h5>
@@ -542,8 +672,8 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
-                    aria-labelledby="list-triggerconfiguration-list">
+                <div class="tab-pane fade" id="list-displayconfiguration" role="tabpanel"
+                    aria-labelledby="list-displayconfiguration-list">
                     <div class="card card-body">
                         <div class="form-group col-6 custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
