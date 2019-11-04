@@ -55,8 +55,7 @@
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane fade show active" id="list-general" role="tabpanel"
-                    aria-labelledby="list-general-list">
+                <div class="tab-pane" id="list-general" role="tabpanel" aria-labelledby="list-general-list">
                     <div class="card card-body">
 
                         <div class="card card-body  mb-3">
@@ -152,140 +151,125 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
+                <div class="tab-pane fade" id="list-design" role="tabpanel"
+                    aria-labelledby="list-design-list">
                     <div class="card card-body">
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="overlayVisible">
-                            <label class="custom-control-label" for="overlayVisible">Overlay Visible</label>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                Color</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="overlayColor" placeholder="#000">
+                        <div class="card card-body mb-3">
+                            <div class="form-group col-6 custom-control custom-switch">
+                                <input type="checkbox" checked class="custom-control-input" id="overlayVisible">
+                                <label class="custom-control-label" for="overlayVisible">Overlay Visible</label>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                Opacity</label>
-                            <div class="col-6">
-                                <input type="range" class="custom-range" min="0" max="1" step="0.01"
-                                    id="overlayOpacity">
+                            <div class="form-group row">
+                                <label for="overlayColor" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Color</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="overlayColor" placeholder="#000">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                Custom Class</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
+                            <div class="form-group row">
+                                <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Opacity</label>
+                                <div class="col-6">
+                                    <input type="range" class="custom-range" min="0" max="1" step="0.01"
+                                        id="overlayOpacity">
+                                </div>
                             </div>
-                        </div>
-                        <hr>
-                        <div class="form-group row">
-                            <label for="borderStyle" class="col-5 ml-2 mb-1 col-form-label">Border Style</label>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <select class="form-control" id="borderStyle">
-                                        <option>Solid</option>
-                                        <option>Dotted</option>
-                                    </select>
+                            <div class="form-group row">
+                                <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
+                                    Custom Class</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="borderColor" class="col-5 ml-2 mb-1 col-form-label">Border
-                                Color</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="borderColor" placeholder="#000">
+
+                        <div class="card card-body mb-3">
+                            <div class="container row">
+                                <div class="form-group col-6">
+                                    <label for="borderStyle" class="col-form-label">Border Style</label>
+                                    <div class="form-group">
+                                        <select class="form-control" id="borderStyle">
+                                            <option>Solid</option>
+                                            <option>Dotted</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="borderColor" class="col-form-label">Border Color</label>
+                                    <input type="text" class="form-control" id="borderColor" placeholder="#000">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="borderRadiıs" class="col-form-label">Border
+                                        Radius</label>
+                                    <input type="text" class="form-control" id="borderRadius" placeholder="10px">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="borderSize" class="col-form-label">Border Size</label>
+                                    <input type="text" class="form-control" id="borderSize" placeholder="1px">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="borderRadiıs" class="col-5 ml-2 mb-1 col-form-label">Border
-                                Radius</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="borderRadius" placeholder="10px">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="borderSize" class="col-5 ml-2 mb-1 col-form-label">Border
-                                Size</label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="borderSize" placeholder="1px">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="showCloseButton">
-                            <label class="custom-control-label" for="showCloseButton">Show Close Button</label>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="showAfterSeconds" class="col-4 ml-2 mb-1 col-form-label">Show After</label>
-                            <div class="col-8 row">
-                                <input type="text" class="form-control col-6" id="showAfterSeconds" placeholder="0">
-                                <label for="showAfterSeconds" class="col-6 col-form-label">seconds</label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="buttonImage" class="col-5 ml-2 mb-1 col-form-label">Button Image
-                            </label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="buttonImage" placeholder="">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="buttonPosition" class="col-5 ml-2 mb-1 col-form-label">Button
-                                Position</label>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <select class="form-control" id="buttonPosition">
+                        <div class="card card-body mb-3">
+                            <div class="container row">
+                                <div class="form-group col-6 custom-control custom-switch">
+                                    <input type="checkbox" checked class="custom-control-input" id="showCloseButton">
+                                    <label class="custom-control-label" for="showCloseButton">Show Close Button</label>
+                                </div>
+                                <div class="form-group col-6 row">
+                                    <label for="showAfterSeconds" class="col-form-label col-4">Show After</label>
+                                    <input type="text" class="form-control col-4" id="showAfterSeconds" placeholder="0">
+                                    <label for="showAfterSeconds" class="col-form-label col-4">seconds</label>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="closeBtnImage" class="col-form-label">Button Image</label>
+                                    <input type="text" class="form-control" id="closeBtnImage" placeholder="">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="clsBtnPosition" class="col-form-label">Button Position</label>
+                                    <select class="form-control" id="clsBtnPosition">
                                         <option>Top Right</option>
                                         <option>Top Left</option>
+                                        <option>Bottom Right</option>
+                                        <option>Bottom Left</option>
                                     </select>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="clsBtnPosAttr1" class="col-form-label">Position 1.
+                                        Attr</label>
+                                    <input type="text" class="form-control" id="clsBtnPosAttr1" placeholder="">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="clsBtnPosAttr2" class="col-form-label">Position 2.
+                                        Attr</label>
+                                    <input type="text" class="form-control" id="clsBtnPosAttr2" placeholder="">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="clsBtnWidth" class="col-form-label">Width</label>
+                                    <input type="text" class="form-control" id="clsBtnWidth" placeholder="">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="clsBtnHeight" class="col-form-label">Height</label>
+                                    <input type="text" class="form-control" id="clsBtnHeight" placeholder="">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="form-group col-6">
-                                <label for="buttonPosAttr1" class="ml-2 mb-1 col-form-label">Position 1.
-                                    Attr</label>
-                                <input type="text" class="form-control" id="buttonPosAttr1" placeholder="">
-                            </div>
-                            <div class="form-group col-6">
-                                <label for="buttonPosAttr2" class="ml-2 mb-1 col-form-label">Position 2.
-                                    Attr</label>
-                                <input type="text" class="form-control" id="buttonPosAttr2" placeholder="">
-                            </div>
-                            <div class="form-group col-6">
-                                <label for="closeButtonWidth" class="ml-2 mb-1 col-form-label">Width</label>
-                                <input type="text" class="form-control" id="closeButtonWidth" placeholder="">
-                            </div>
-                            <div class="form-group col-6">
-                                <label for="closeButtonHeight" class="ml-2 mb-1 col-form-label">Height</label>
-                                <input type="text" class="form-control" id="closeButtonHeight" placeholder="">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="form-group row">
-                            <label for="shadowSpread" class="col-5 ml-2 mb-1 col-form-label">Shadow Spread
-                            </label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="shadowSpread" placeholder="1px">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="shadowBlur" class="col-5 ml-2 mb-1 col-form-label">Shadow Blur
-                            </label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="shadowBlur" placeholder="12 px">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="shadowColor" class="col-5 ml-2 mb-1 col-form-label">Shadow Color
-                            </label>
-                            <div class="col-6">
-                                <input type="text" class="form-control" id="shadowColor" placeholder="#000">
+
+                        <div class="card card-body mb-3">
+                            <div class="container row">
+                                <div class="form-group col-4">
+                                    <label for="shadowSpread" class="col-form-label">Shadow Spread</label>
+                                    <input type="text" class="form-control" id="shadowSpread" placeholder="1px">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="shadowBlur" class="col-form-label">Shadow Blur</label>
+                                    <input type="text" class="form-control" id="shadowBlur" placeholder="12 px">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="shadowColor" class="col-form-label">Shadow Color</label>
+                                    <input type="text" class="form-control" id="shadowColor" placeholder="#000">
+                                </div>
                             </div>
                         </div>
                     </div>
