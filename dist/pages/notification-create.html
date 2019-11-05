@@ -675,56 +675,77 @@
                             </div>
                         </div>
 
-
-                        <div class="container">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input col-4" id="geoTargeting">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="geoTargeting">Geo
-                                    Targeting</label>
+                        <div class="card card-body mb-3">
+                            <div class="form-group custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="geoTargetingCheck">
+                                <label class="custom-control-label" for="geoTargetingCheck">Geo Targeting</label>
+                            </div>
+                            <div class="form-group container row">
+                                <div class="custom-control custom-radio mb-2 col">
+                                    <input type="radio" checked id="geoTargetingInclude" name="geoTargetingRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="geoTargetingInclude">Include</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-2 col">
+                                    <input type="radio" id="geoTargetingExclude" name="geoTargetingRadio"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="geoTargetingExclude">Exclude</label>
+                                </div>
+                                <div class="form-group col">
+                                    <select class="form-control" name="geoTargetingCountry" id="geoTargetingCountry">
+                                        <option value="none">Türkiye </option>
+                                        <option value="slideleft">Yunanistan</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="schedulePopup">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="schedulePopup">Schedule
                                     Popup</label>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="afterXPagesVisit">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="afterXPagesVisit">After X Pages
                                     Visit</label>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="referralDetection">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="referralDetection">Referral
                                     Detection</label>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="spokenLanguage">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="spokenLanguage">Spoken
                                     Language</label>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="popupByDaysOfWeek">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="popupByDaysOfWeek">Popup by
                                     Days of Week</label>
                             </div>
                         </div>
-                        <hr>
-                        <div class="container">
+
+
+                        <div class="card card-body mb-3">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="popupByCustomCookie">
                                 <label class="custom-control-label col-8 ml-2 mb-1" for="popupByCustomCookie">Popup by
