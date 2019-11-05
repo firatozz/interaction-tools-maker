@@ -91,7 +91,8 @@
                                     <div class="custom-control custom-radio mb-2">
                                         <input type="radio" id="behaviourOnClickRadio" name="behaviourOnClick"
                                             class="custom-control-input">
-                                        <label class="custom-control-label" for="behaviourOnClickRadio">Copy to Clipboard</label>
+                                        <label class="custom-control-label" for="behaviourOnClickRadio">Copy to
+                                            Clipboard</label>
                                     </div>
                                     <input type="text" class="form-control" id="copyCouponCode"
                                         placeholder="Coupon Code...">
@@ -736,9 +737,19 @@
                 <div class="tab-pane fade" id="list-cookiemanagement" role="tabpanel"
                     aria-labelledby="list-cookiemanagement-list">
                     <div class="card card-body">
-                        <div class="form-group col-4">
-                            <label>Cookie Expired Day Count</label>
-                            <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
+                        <div class="container row">
+                            <div class="form-group col-4 custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="useCookieCheck">
+                                <label class="custom-control-label" for="useCookieCheck">Use Cookie</label>
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Cookie Expired Day Count</label>
+                                <input type="number" min="1" class="form-control" id="cookieExpPre" placeholder="7">
+                            </div>
+                            <div class="form-group col-4">
+                                <label>Cookie Name</label>
+                                <input type="text" class="form-control" id="cookieName" placeholder="intToolMaker">
+                            </div>
                         </div>
                     </div>
                 </div>
