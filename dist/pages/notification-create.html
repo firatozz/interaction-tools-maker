@@ -35,19 +35,17 @@
                     href="#list-general" role="tab" aria-controls="general">General</a>
                 <a class="list-group-item list-group-item-action" id="list-design-list" data-toggle="list"
                     href="#list-design" role="tab" aria-controls="design">Design</a>
-                <a class="list-group-item list-group-item-action" id="list-events-list" data-toggle="list"
-                    href="#list-events" role="tab" aria-controls="events">Events</a>
+                <a class="list-group-item list-group-item-action" id="list-triggerConfiguration-list" data-toggle="list"
+                    href="#list-triggerConfiguration" role="tab" aria-controls="triggerConfiguration">Trigger
+                    Configuration</a>
                 <a class="list-group-item list-group-item-action" id="list-position-list" data-toggle="list"
                     href="#list-position" role="tab" aria-controls="position">Position</a>
                 <a class="list-group-item list-group-item-action" id="list-effects-list" data-toggle="list"
                     href="#list-effects" role="tab" aria-controls="effects">Effects</a>
                 <a class="list-group-item list-group-item-action" id="list-sizing-list" data-toggle="list"
                     href="#list-sizing" role="tab" aria-controls="sizing">Sizing</a>
-                <a class="list-group-item list-group-item-action" id="list-triggerconfiguration-list" data-toggle="list"
-                    href="#list-triggerconfiguration" role="tab" aria-controls="triggerconfiguration">Trigger
-                    Configuration</a>
-                <a class="list-group-item list-group-item-action" id="list-displayconfiguration-list" data-toggle="list"
-                    href="#list-displayconfiguration" role="tab" aria-controls="displayconfiguration">Display
+                <a class="list-group-item list-group-item-action" id="list-displayConfiguration-list" data-toggle="list"
+                    href="#list-displayConfiguration" role="tab" aria-controls="displayConfiguration">Display
                     Configuration</a>
                 <a class="list-group-item list-group-item-action" id="list-cookiemanagement-list" data-toggle="list"
                     href="#list-cookiemanagement" role="tab" aria-controls="cookiemanagement">Cookie Management</a>
@@ -80,14 +78,20 @@
                                             class="custom-control-input">
                                         <label class="custom-control-label" for="customRadio1">URL</label>
                                     </div>
-                                    <input type="text" class="form-control mb-1" id="urlTarget"
+                                    <input type="text" class="form-control mb-3" id="urlTarget"
                                         placeholder="www.google.com">
+                                    <div class="form-group custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" checked
+                                            id="targetOpenNewTab">
+                                        <label class="custom-control-label" for="targetOpenNewTab">Target URL Open New
+                                            Tab</label>
+                                    </div>
                                 </div>
                                 <div class="form-group col-6">
                                     <div class="custom-control custom-radio mb-2">
-                                        <input type="radio" id="customRadio2" name="behaviourOnClick"
+                                        <input type="radio" id="behaviourOnClickRadio" name="behaviourOnClick"
                                             class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadio2">Copy to Clipboard</label>
+                                        <label class="custom-control-label" for="behaviourOnClickRadio">Copy to Clipboard</label>
                                     </div>
                                     <input type="text" class="form-control" id="copyCouponCode"
                                         placeholder="Coupon Code...">
@@ -262,7 +266,8 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-events" role="tabpanel" aria-labelledby="list-events-list">
+                <div class="tab-pane fade" id="list-triggerConfiguration" role="tabpanel"
+                    aria-labelledby="list-triggerConfiguration-list">
                     <div class="card card-body">
 
                         <div class="card card-body mb-3">
@@ -627,33 +632,49 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-triggerconfiguration" role="tabpanel"
-                    aria-labelledby="list-triggerconfiguration-list">
+                <div class="tab-pane fade" id="list-displayConfiguration" role="tabpanel"
+                    aria-labelledby="list-displayConfiguration-list">
                     <div class="card card-body">
-                        <div class="container">
+
+                        <div class="card card-body mb-3">
                             <h5>Devices</h5>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnDesktop">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnDesktop">Show on
-                                    Desktop</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnMobile">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnMobile">Show on
-                                    Mobile</label>
-                            </div>
-                            <div class="custom-control custom-checkbox ml-2 mb-1">
-                                <input type="checkbox" class="custom-control-input col-4" id="showOnTablet">
-                                <label class="custom-control-label col-8 ml-2 mb-1" for="showOnTablet">Show on
-                                    Tablet</label>
+                            <div class="form-group container row">
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" checked class="custom-control-input" id="showOnDesktop">
+                                    <label class="custom-control-label" for="showOnDesktop">Show on Desktop</label>
+                                </div>
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="showOnMobile">
+                                    <label class="custom-control-label" for="showOnMobile">Show on
+                                        Mobile</label>
+                                </div>
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="showOnTablet">
+                                    <label class="custom-control-label" for="showOnTablet">Show on
+                                        Tablet</label>
+                                </div>
                             </div>
                         </div>
-                        <hr>
-                        <div class="form-group col-6 custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="canScrollPre">
-                            <label class="custom-control-label" for="canScrollPre">can Scroll</label>
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group container row">
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="canScrollPre">
+                                    <label class="custom-control-label" for="canScrollPre">can Scroll</label>
+                                </div>
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="showOncePerSession">
+                                    <label class="custom-control-label" for="showOncePerSession">Show Once Per
+                                        Session</label>
+                                </div>
+                                <div class="col custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
+                                    <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
+                                </div>
+                            </div>
                         </div>
-                        <hr>
+
+
                         <div class="container">
                             <div class="form-group col-6 custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input col-4" id="geoTargeting">
@@ -709,50 +730,6 @@
                                     Custom Cookie</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="list-displayconfiguration" role="tabpanel"
-                    aria-labelledby="list-displayconfiguration-list">
-                    <div class="card card-body">
-
-                        <div class="card card-body mb-3">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" checked id="targetOpenNewTabPre">
-                                <label class="custom-control-label" for="targetOpenNewTabPre">Target Open New
-                                    Tab</label>
-                            </div>
-                        </div>
-
-                        <div class="card card-body mb-3">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="showAsExitIntentPre">
-                                <label class="custom-control-label" for="showAsExitIntentPre">Show as Exit
-                                    Intent</label>
-                            </div>
-                        </div>
-
-                        <div class="card card-body mb-3">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="showOncePerSessionPre">
-                                <label class="custom-control-label" for="showOncePerSessionPre">Show Once Per
-                                    Session</label>
-                            </div>
-                        </div>
-
-                        <div class="card card-body mb-3">
-                            <div class="form-group col-6 custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="showOnlyOnce">
-                                <label class="custom-control-label" for="showOnlyOnce">Show Only Once</label>
-                            </div>
-                            <div class="form-group row">
-                                <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Openin Delay</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="openinDelay" placeholder="0">
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
