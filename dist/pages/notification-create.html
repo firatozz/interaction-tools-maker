@@ -550,17 +550,58 @@
 
                 <div class="tab-pane fade" id="list-effects" role="tabpanel" aria-labelledby="list-effects-list">
                     <div class="card card-body">
-                        <div class="form-group col-6">
-                            <label>Opening Animation</label>
-                            <select id="animation" class="form-control">
-                                <option selected value="fade">Fade</option>
-                                <option value="blur">Blur</option>
-                                <option value="bubble">Bubble</option>
-                                <option value="classic">Classic</option>
-                            </select>
-                        </div>
-                    </div>
 
+                        <div class="card card-body mb-3">
+                            <div class="form-group col-6">
+                                <label>Open Animation</label>
+                                <select class="form-control" name="openAnimationType" id="open-animation-type">
+                                    <option value="none">None </option>
+                                    <option value="slideleft">Slide left </option>
+                                    <option value="slideright">Slide right </option>
+                                    <option value="pop">Pop </option>
+                                    <option value="fade">Fade </option>
+                                    <option value="flip">Flip </option>
+                                    <option value="turn">Turn </option>
+                                    <option value="flow">Flow </option>
+                                    <option value="slideup">Slide up </option>
+                                    <option value="slidedown">Slide down </option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="openAnimationMS" class="col-form-label">Duration</label>
+                                <div class="container row">
+                                    <input type="text" class="form-control col" id="openAnimationMS" placeholder="250">
+                                    <label for="openAnimationMS" class="col-form-label col">milliseconds</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-body mb-3">
+                            <div class="form-group col-6">
+                                <label>Close Animation</label>
+                                <select class="form-control" name="closeAnimationType" id="close-animation-type">
+                                    <option value="none">None </option>
+                                    <option value="slideleft">Slide left </option>
+                                    <option value="slideright">Slide right </option>
+                                    <option value="pop">Pop </option>
+                                    <option value="fade">Fade </option>
+                                    <option value="flip">Flip </option>
+                                    <option value="turn">Turn </option>
+                                    <option value="flow">Flow </option>
+                                    <option value="slideup">Slide up </option>
+                                    <option value="slidedown">Slide down </option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="closenimationMS" class="col-form-label">Duration</label>
+                                <div class="container row">
+                                    <input type="text" class="form-control col" id="closenimationMS" placeholder="250">
+                                    <label for="closenimationMS" class="col-form-label col">milliseconds</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="tab-pane fade" id="list-sizing" role="tabpanel" aria-labelledby="list-sizing-list">
