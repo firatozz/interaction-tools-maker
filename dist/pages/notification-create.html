@@ -560,12 +560,12 @@
                         <div class="card card-body mb-3">
                             <div class="form-group col-6">
                                 <label>Open Animation</label>
-                                <select class="form-control" name="openAnimationType" id="open-animation-type">
+                                <select class="form-control" name="openAnimationType" id="openAnimationType">
                                     <option value="none">None </option>
                                     <option value="slideleft">Slide left </option>
                                     <option value="slideright">Slide right </option>
                                     <option value="pop">Pop </option>
-                                    <option value="fade">Fade </option>
+                                    <option selected="selected" value="fade">Fade </option>
                                     <option value="flip">Flip </option>
                                     <option value="turn">Turn </option>
                                     <option value="flow">Flow </option>
@@ -576,7 +576,7 @@
                             <div class="form-group col-6">
                                 <label for="openAnimationMS" class="col-form-label">Duration</label>
                                 <div class="container row">
-                                    <input type="text" class="form-control col" id="openAnimationMS" placeholder="250">
+                                    <input type="text" class="form-control col" id="openAnimationMS" placeholder="800">
                                     <label for="openAnimationMS" class="col-form-label col">milliseconds</label>
                                 </div>
                             </div>
@@ -585,12 +585,12 @@
                         <div class="card card-body mb-3">
                             <div class="form-group col-6">
                                 <label>Close Animation</label>
-                                <select class="form-control" name="closeAnimationType" id="close-animation-type">
+                                <select class="form-control" name="closeAnimationType" id="closeAnimationType">
                                     <option value="none">None </option>
                                     <option value="slideleft">Slide left </option>
                                     <option value="slideright">Slide right </option>
                                     <option value="pop">Pop </option>
-                                    <option value="fade">Fade </option>
+                                    <option selected="selected" value="fade">Fade </option>
                                     <option value="flip">Flip </option>
                                     <option value="turn">Turn </option>
                                     <option value="flow">Flow </option>
@@ -601,7 +601,7 @@
                             <div class="form-group col-6">
                                 <label for="closenimationMS" class="col-form-label">Duration</label>
                                 <div class="container row">
-                                    <input type="text" class="form-control col" id="closenimationMS" placeholder="250">
+                                    <input type="text" class="form-control col" id="closenimationMS" placeholder="800">
                                     <label for="closenimationMS" class="col-form-label col">milliseconds</label>
                                 </div>
                             </div>
@@ -616,19 +616,19 @@
                             <label for="imageWidth" class="col-5 ml-2 mb-1 col-form-label">Width
                             </label>
                             <div class="col-6">
-                                <input type="text" class="form-control" id="imageWidth" placeholder="12 px">
+                                <input type="text" class="form-control" id="imageWidth" placeholder="400">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="imageHeight" class="col-5 ml-2 mb-1 col-form-label">Height
                             </label>
                             <div class="col-6">
-                                <input type="text" class="form-control" id="imageHeight" placeholder="#000">
+                                <input type="text" class="form-control" id="imageHeight" placeholder="300">
                             </div>
                         </div>
-                        <div class="custom-control custom-checkbox ml-2 mb-1">
-                            <input type="checkbox" class="custom-control-input col-4" id="autoScalable">
-                            <label class="custom-control-label col-8 ml-2 mb-1" for="autoScalable">Auto Scalable</label>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" checked class="custom-control-input" id="autoScalable">
+                            <label class="custom-control-label" for="autoScalable">Auto Scalable</label>
                         </div>
                     </div>
                 </div>
