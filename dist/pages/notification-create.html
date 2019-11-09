@@ -59,20 +59,21 @@
 
                         <div class="card card-body  mb-3">
                             <div class="form-group container">
-                                <label for="imgurl">Image URL</label>
+                                <label for="imageurlPre">Image URL</label>
                                 <input type="text" class="form-control" id="imageurlPre"
                                     value="https://firatozz.github.io/assets/img/javascript.png"
                                     placeholder="https://firatozz.github.io/assets/img/javascript.png">
                             </div>
                             <div class="form-group container">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" checked id="behaviourOnContent">
+                                    <input type="checkbox" class="custom-control-input" checked id="behaviourOnContent"
+                                        onclick="myFunction()">
                                     <label class="custom-control-label" for="behaviourOnContent">Behaviour on Content
                                         Click</label>
                                 </div>
                             </div>
-                            <div class="container row">
-                                <div class="form-group col-6">
+                            <div class="container" id="behaviourOnContentTrue">
+                                <div class="form-group">
                                     <div class="custom-control custom-radio mb-2">
                                         <input type="radio" checked id="customRadio1" name="behaviourOnClick"
                                             class="custom-control-input">
@@ -87,7 +88,7 @@
                                             Tab</label>
                                     </div>
                                 </div>
-                                <div class="form-group col-6">
+                                <div class="form-group">
                                     <div class="custom-control custom-radio mb-2">
                                         <input type="radio" id="behaviourOnClickRadio" name="behaviourOnClick"
                                             class="custom-control-input">
@@ -103,14 +104,15 @@
                         <div class="card card-body  mb-3">
                             <div class="form-group container">
                                 <div class="form-group col-6 custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="autoClose">
-                                    <label class="custom-control-label" for="autoClose">Auto Close</label>
+                                    <input type="checkbox" checked class="custom-control-input" id="autoCloseGeneral" onclick="autoCloseGeneral()">
+                                    <label class="custom-control-label" for="autoCloseGeneral">Auto Close</label>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="openinDelay" class="col-5 ml-2 mb-1 col-form-label">Auto Close
+                                <div class="form-group row" id="openingDelayGeneralGroup">
+                                    <label for="openingDelayGeneral" class="col-5 ml-2 mb-1 col-form-label">Auto Close
                                         Delay</label>
                                     <div class="col-6">
-                                        <input type="text" class="form-control" id="openinDelay" placeholder="5 sn.">
+                                        <input type="text" class="form-control" id="openingDelayGeneral"
+                                            placeholder="5 sn.">
                                     </div>
                                 </div>
                             </div>
@@ -893,5 +895,26 @@
 <script type="text/javascript" src="../../assets/plugins/prism/prism.js"></script>
 <script type="text/javascript" src="../../assets/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap.min.js"></script>
+<script>
+    function myFunction() {
+        var checkBox = document.getElementById("behaviourOnContent");
+        var text = document.getElementById("behaviourOnContentTrue");
+        if (checkBox.checked == true) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
+
+    function autoCloseGeneral() {
+        var checkBox = document.getElementById("autoCloseGeneral");
+        var text = document.getElementById("openingDelayGeneralGroup");
+        if (checkBox.checked == true) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
+</script>
 
 </html>

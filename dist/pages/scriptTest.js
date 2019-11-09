@@ -1,4 +1,3 @@
-< script >
     function test() {
 
         var settings = {};
@@ -74,8 +73,8 @@
 
 
             var string = `
-var popUp1 = new sweetFunctionalPopup();
-popUp1.setOptions({`;
+            var popUp1 = new sweetFunctionalPopup();
+            popUp1.setOptions({`;
             var stringValues = ["imageUrl", "animation", "targetUrl"];
 
             var string1 = '';
@@ -93,9 +92,7 @@ popUp1.setOptions({`;
             }
             string += string1;
 
-
             string += `});\n`;
-
 
             document.getElementById('code-section').innerHTML = string;
             Prism.highlightAll();
@@ -104,5 +101,4 @@ popUp1.setOptions({`;
 
             popUp1.setOptions(settings);
         }
-    } <
-    /script>
+    }

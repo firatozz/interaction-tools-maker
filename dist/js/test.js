@@ -1,1 +1,1 @@
-function deneme(){console.log("deneme")}deneme("John"),deneme("John");
+function myFunction(){var e=document.getElementById("behaviourOnContent"),t=document.getElementById("targetOpenNewTab");1==e.checked?t.style.display="block":t.style.display="none"}test();

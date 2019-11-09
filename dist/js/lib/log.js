@@ -1,1 +1,1 @@
-function deneme(){console.log("deneme")}
+function myFunction(){var e=document.getElementById("behaviourOnContent"),n=document.getElementById("targetOpenNewTab");1==e.checked?n.style.display="block":n.style.display="none"}
