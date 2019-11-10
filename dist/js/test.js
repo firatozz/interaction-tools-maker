@@ -1,1 +1,1 @@
-function myFunction(){var e=document.getElementById("behaviourOnContent"),t=document.getElementById("targetOpenNewTab");1==e.checked?t.style.display="block":t.style.display="none"}test();
+function myFunction(){var e=document.getElementById("behaviourOnContent"),n=document.getElementById("behaviourOnContentTrue");1==e.checked?n.style.display="block":n.style.display="none"}test();

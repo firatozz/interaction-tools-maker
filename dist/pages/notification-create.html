@@ -169,13 +169,6 @@
                                         id="overlayOpacity">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="overlayCSutomClass" class="col-5 ml-2 mb-1 col-form-label">Overlay
-                                    Custom Class</label>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" id="overlayCSutomClass" placeholder="">
-                                </div>
-                            </div>
                         </div>
 
                         <div class="card card-body mb-3">
@@ -238,13 +231,11 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="clsBtnPosAttr1" class="col-form-label">Position 1.
-                                        Attr</label>
+                                    <label for="clsBtnPosAttr1" class="col-form-label">Top</label>
                                     <input type="text" class="form-control" id="clsBtnPosAttr1" placeholder="">
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="clsBtnPosAttr2" class="col-form-label">Position 2.
-                                        Attr</label>
+                                    <label for="clsBtnPosAttr2" class="col-form-label">Right</label>
                                     <input type="text" class="form-control" id="clsBtnPosAttr2" placeholder="">
                                 </div>
                                 <div class="form-group col-6">
@@ -895,26 +886,6 @@
 <script type="text/javascript" src="../../assets/plugins/prism/prism.js"></script>
 <script type="text/javascript" src="../../assets/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap.min.js"></script>
-<script>
-    function myFunction() {
-        var checkBox = document.getElementById("behaviourOnContent");
-        var text = document.getElementById("behaviourOnContentTrue");
-        if (checkBox.checked == true) {
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-    }
-
-    function autoCloseGeneral() {
-        var checkBox = document.getElementById("autoCloseGeneral");
-        var text = document.getElementById("openingDelayGeneralGroup");
-        if (checkBox.checked == true) {
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-    }
-</script>
+<script type="text/javascript" src="../../dist/js/lib/log.js"></script>
 
 </html>

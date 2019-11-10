@@ -1,0 +1,1 @@
+function generalTab(s){this.imageUrl="https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png",this.targetUrl="www.google.com.tr",this.targetOpenNewTab=!0,this.copyCouponCode="",this.autoClose=!1,this.autoCloseDelay=0,this.allowPopupDismissal=!1,this.dismissOnEsc=!1,this.dismissOnOverlayClick=!0,this.dismissOncontentClick=!0}
