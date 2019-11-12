@@ -1,7 +1,8 @@
  import "./all-configurations"
 
- var width = allConfig().sizingWidth;
- var height = allConfig().sizingHeight;
+ var config = allConfig();
+ var width = config.sizingWidth;
+ var height = config.sizingHeight;
 
  function addCSS() {
 
