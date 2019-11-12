@@ -99,4 +99,10 @@ function allConfig(options) {
     this.cookieCookieName = "intToolMaker";
 
 
+    //Global Variables
+    this.itmBgEl;
+    this.itmPopupEl;
+    this.itmCloseBtnEl;
+    this.itmShown = false;
+    this.itmTransformDefault = "";
 }
