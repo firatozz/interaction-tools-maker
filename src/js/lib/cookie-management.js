@@ -1,3 +1,12 @@
+import "./all-configurations"
+
+var config = allConfig();
+var cookie_name = config.cookieCookieName;
+var cookieExp = config.cookieCookieExpiredDayCount;
+var showOncePerSession = config.displayShowOncePerSession;
+
+
+
 // Create a cookie func
 function createCookie(name, value, days, sessionOnly) {
     var expires = "";
@@ -27,7 +36,7 @@ function getCookie(name) {
 
 // Delete a cookie
 function eraseCookie(name) {
-    this.createCookie(name, "", -1);
+    createCookie(name, "", -1);
 }
 
 // Handle the swFunctionalPopup_shown cookie
@@ -35,22 +44,22 @@ function eraseCookie(name) {
 // If not present or false, create and return false
 function checkCookie() {
     // Handle cookie reset
-    if (this.cookieExp <= 0) {
+    if (cookieExp <= 0) {
         // Handle showing notification box once per browser session.
-        if (this.showOncePerSession && getCookie("swFunctionalPopup_shown_session") == "true")
+        if (showOncePerSession && getCookie(cookie_name + "_session") == "true")
             return true;
 
-        this.eraseCookie("swFunctionalPopup_shown");
+        eraseCookie(cookie_name);
         return false;
     }
     // If showOncePerSession is set to false
-    if (!this.showOncePerSession) {
-        this.eraseCookie("swFunctionalPopup_shown");
+    if (!showOncePerSession) {
+        eraseCookie(cookie_name);
         return false;
     }
 
     // If cookie is set to true
-    if (this.getCookie("swFunctionalPopup_shown") == "true")
+    if (getCookie(cookie_name) == "true")
         return true;
 
     return false;
@@ -59,5 +68,5 @@ function checkCookie() {
 
 // These will use showing popup
 
-this.createCookie("cookie_name", this.showOncePerSession, this.cookieExp, false);
-this.createCookie("cookie_name_session", "true", 0, true);
+createCookie(cookie_name, showOncePerSession, cookieExp, false);
+createCookie(cookie_name + "_session", "true", 0, true);
