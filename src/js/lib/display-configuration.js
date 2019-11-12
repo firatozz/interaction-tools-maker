@@ -4,14 +4,15 @@ import "./event-listener"
 var config = allConfig();
 var displayShowAfterXPagesVisit = config.displayShowAfterXPagesVisit;
 var displayShowAfterXPagesVisitCount = config.displayShowAfterXPagesVisitCount;
+var canScroll = config.displayCanScroll;
 
 
 function afterXPagesVisit() {
     if (displayShowAfterXPagesVisit) {
-        if (this.displayShowAfterXPagesVisitCount > 0)
-            this.canScroll = true;
+        if (displayShowAfterXPagesVisitCount > 0)
+            canScroll = true;
 
-        if (this.displayShowAfterXPagesVisitCount <= 0)
+        if (displayShowAfterXPagesVisitCount <= 0)
             return true;
 
         var isSessionCount = sessionStorage.getItem('isSessionCount');
@@ -25,4 +26,8 @@ function afterXPagesVisit() {
 
         return false;
     }
+}
+
+function canScrollFunc() {
+    document.body.style.overflow = "auto"; //True. If wanna false   "hidden"
 }
