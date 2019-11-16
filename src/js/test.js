@@ -1,3 +1,4 @@
 import './lib/log.js'
 
-test();
+myFunction();
+testMessage();

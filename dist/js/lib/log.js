@@ -1,1 +1,1 @@
-function myFunction(){var e=document.getElementById("behaviourOnContent"),n=document.getElementById("behaviourOnContentTrue");1==e.checked?n.style.display="block":n.style.display="none"}
+function myFunction(){var e=document.getElementById("behaviourOnContent"),n=document.getElementById("behaviourOnContentTrue");1==e.checked?n.style.display="block":n.style.display="none"}function testMessage(){console.log("test")}

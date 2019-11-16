@@ -1,0 +1,1 @@
+function deneme(){console.log("deneme başarılı")}

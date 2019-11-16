@@ -1,50 +1,47 @@
-import "./lib/all-configurations";
-import "./lib/all-css";
-import "./lib/event-listener";
-import "./lib/cookie-management";
+import './lib/cssConfiguration'
 
-
-var config = allConfig();
+deneme();
+// var config = allConfig();
 
 /** Loading... */
-function showPopUp() {
-    if (config.itmShown) return;
+// function showPopUp() {
+//     if (config.itmShown) return;
 
-    if (config.displayShowAfterXPagesVisit) {
-        if (this.delay > 1) {
-            this.canScroll = true;
-        }
+//     if (config.displayShowAfterXPagesVisit) {
+//         if (this.delay > 1) {
+//             this.canScroll = true;
+//         }
 
-        setTimeout(() => {
-            this.bgEl.style.display = "block";
-            this.popupEl.className = "swFunctionalPopup active";
-            this.shown = true;
-        }, this.delay * 1000);
-    }
+//         setTimeout(() => {
+//             this.bgEl.style.display = "block";
+//             this.popupEl.className = "swFunctionalPopup active";
+//             this.shown = true;
+//         }, this.delay * 1000);
+//     }
 
-    // Handle scaling
-    scalePopUp();
+//     // Handle scaling
+//     scalePopUp();
 
-    // Save body overflow value and hide scrollbars
-    if (!this.canScroll) {
-        document.body.style.overflow = "hidden";
-    }
+//     // Save body overflow value and hide scrollbars
+//     if (!this.canScroll) {
+//         document.body.style.overflow = "hidden";
+//     }
 
-}
+// }
 
-/** set Options  Loading...*/
+// /** set Options  Loading...*/
 
-function setOptions(options) {
-    for (var i = 0; i < Object.keys(options).length; i++) {
-        this[Object.keys(options)[i]] = options[Object.keys(options)[i]];
-    }
-    setAnimation();
+// function setOptions(options) {
+//     for (var i = 0; i < Object.keys(options).length; i++) {
+//         this[Object.keys(options)[i]] = options[Object.keys(options)[i]];
+//     }
+//     setAnimation();
 
-
-    addCSS();
-    domReady(() => {
-        if (checkCookie()) return;
-        createPopUp();
-        loadEvents();
-    });
-}
+//     addCSS();
+//     domReady(() => {
+//         if (checkCookie()) return;
+//         createPopUp();
+//         loadEvents();
+//     });
+// }
+console.log("PreviewJS worked.");
