@@ -26,6 +26,7 @@
      // elements so user CSS isn't overwritten
      document.head.insertBefore(style, document.getElementsByTagName("style")[0]);
  }
+ addCSS();
 
 
 

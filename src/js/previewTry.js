@@ -1,11 +1,16 @@
 import "./lib/all-css";
 import "./lib/event-listener"
+import "./lib/all-css"
+import "./lib/cookie-management"
+
+
+var config = allConfig();
 
 /** Loading... */
 function showPopUp() {
-    if (this.shown) return;
+    if (config.itmShown) return;
 
-    if (this.pageviewsCount()) {
+    if (config.displayShowAfterXPagesVisit) {
         if (this.delay > 1) {
             this.canScroll = true;
         }
@@ -33,11 +38,13 @@ function setOptions(options) {
     for (var i = 0; i < Object.keys(options).length; i++) {
         this[Object.keys(options)[i]] = options[Object.keys(options)[i]];
     }
-    this.setAnimation();
-    this.addCSS();
-    this.domReady(() => {
-        if (this.checkCookie()) return;
+    setAnimation();
+
+    addCSS();
+    domReady(() => {
+        if (checkCookie()) return;
         this.createPopUp();
         this.loadEvents();
     });
 }
+setOptions();
