@@ -1,6 +1,3 @@
-import "./all-configurations"
-import "./event-listener"
-
 var config = allConfig();
 var event = addEvent();
 

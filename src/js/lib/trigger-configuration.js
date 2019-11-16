@@ -1,6 +1,3 @@
-import "./all-configurations"
-import "./event-listener"
-
 var event = addEvent();
 
 // Trigger Cofiguration > Exit Intent 

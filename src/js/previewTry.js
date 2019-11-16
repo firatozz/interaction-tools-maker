@@ -3,8 +3,8 @@ import "./lib/all-css";
 import "./lib/event-listener";
 import "./lib/cookie-management";
 
-var config = allConfig();
 
+var config = allConfig();
 
 /** Loading... */
 function showPopUp() {
@@ -41,10 +41,10 @@ function setOptions(options) {
     setAnimation();
 
 
-    this.addCSS();
+    addCSS();
     domReady(() => {
         if (checkCookie()) return;
-        this.createPopUp();
-        this.loadEvents();
+        createPopUp();
+        loadEvents();
     });
 }
