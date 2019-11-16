@@ -1,4 +1,4 @@
- import "./all-configurations"
+ import "./all-configurations";
 
  var config = allConfig();
  var width = config.sizingWidth;
@@ -17,7 +17,6 @@
          this.css
      );
 
-
      // Create the style element
      var style = document.createElement("style");
      style.type = "text/css";
@@ -26,7 +25,6 @@
      // elements so user CSS isn't overwritten
      document.head.insertBefore(style, document.getElementsByTagName("style")[0]);
  }
- addCSS();
 
 
 

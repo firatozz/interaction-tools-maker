@@ -1,1 +1,1 @@
-function addEvent(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.addEventListener("on"+t,n)}function domReady(e){"interactive"===document.readyState||"complete"===document.readyState?e():this.addEvent(document,"DOMContentLoaded",e)}
+function addEvent(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.addEventListener("on"+t,n)}function domReady(e){"interactive"===document.readyState||"complete"===document.readyState?e():addEvent(document,"DOMContentLoaded",e)}

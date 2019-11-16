@@ -1,10 +1,10 @@
+import "./lib/all-configurations";
 import "./lib/all-css";
-import "./lib/event-listener"
-import "./lib/all-css"
-import "./lib/cookie-management"
-
+import "./lib/event-listener";
+import "./lib/cookie-management";
 
 var config = allConfig();
+
 
 /** Loading... */
 function showPopUp() {
@@ -23,7 +23,7 @@ function showPopUp() {
     }
 
     // Handle scaling
-    this.scalePopUp();
+    scalePopUp();
 
     // Save body overflow value and hide scrollbars
     if (!this.canScroll) {
@@ -40,11 +40,11 @@ function setOptions(options) {
     }
     setAnimation();
 
-    addCSS();
+
+    this.addCSS();
     domReady(() => {
         if (checkCookie()) return;
         this.createPopUp();
         this.loadEvents();
     });
 }
-setOptions();

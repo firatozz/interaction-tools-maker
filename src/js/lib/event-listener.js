@@ -8,5 +8,5 @@ function addEvent(obj, event, callback) {
 
 // Ensure the DOM has loaded
 function domReady(callback) {
-    (document.readyState === "interactive" || document.readyState === "complete") ? callback(): this.addEvent(document, "DOMContentLoaded", callback);
+    (document.readyState === "interactive" || document.readyState === "complete") ? callback(): addEvent(document, "DOMContentLoaded", callback);
 }
