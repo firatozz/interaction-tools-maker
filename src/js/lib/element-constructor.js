@@ -1,3 +1,5 @@
+import "./all-configurations"
+
 var config = allConfig();
 var bgEl = config.itmBgEl;
 var popupEl = config.itmPopupEl;
