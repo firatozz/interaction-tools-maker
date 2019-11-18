@@ -1,4 +1,4 @@
-import './lib/cssConfiguration'
+import './lib/all-css'
 
 deneme();
 // var config = allConfig();

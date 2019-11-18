@@ -1,1 +1,1 @@
-import"./lib/cssConfiguration";deneme(),console.log("PreviewJS worked.");
+import"./lib/all-css";deneme(),console.log("PreviewJS worked.");
