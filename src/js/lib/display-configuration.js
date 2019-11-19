@@ -26,7 +26,8 @@ function afterXPagesVisit() {
         return false;
     }
 }
-
-function canScrollFunc() {
-    document.body.style.overflow = "auto"; //True. If wanna false   "hidden"
+if (canScroll) {
+    function canScrollFunc() {
+        document.body.style.overflow = "auto"; //True. If wanna false   "hidden"
+    }
 }

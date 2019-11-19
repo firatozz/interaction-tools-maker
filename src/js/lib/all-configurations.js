@@ -1,6 +1,6 @@
 function allConfig(options) {
     /* General Tab Config Variables*/
-    this.generalImageUrl = "https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png";
+    this.generalImageUrl = 'https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png';
     this.generalTargetUrl = "www.google.com.tr";
     this.generalTargetOpenNewTab = true;
     this.generalCopyCouponCode = "";

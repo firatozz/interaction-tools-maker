@@ -1,4 +1,5 @@
 import './lib/all-css.js'
+import './lib/element-constructor.js'
 
 var config = allConfig();
 
@@ -39,7 +40,7 @@ function setOptions(options) {
     addCSS();
     domReady(() => {
         if (checkCookie()) return;
-        createPopUp();
+        elementConstructor();
         loadEvents();
     });
 }
