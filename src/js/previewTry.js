@@ -2,7 +2,7 @@ import './lib/all-configurations.js'
 import './lib/all-css.js'
 import './lib/element-constructor.js'
 
-var config = allConfig();
+//var config = allConfig();
 
 /** Loading... */
 // function showPopUp() {
@@ -46,3 +46,9 @@ var config = allConfig();
 //         loadEvents();
 //     });
 // }
+
+function showPopUp() {
+    addCSS();
+    console.log("Test");
+    elementConstructor();
+}
