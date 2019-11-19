@@ -1,8 +1,9 @@
  import './all-configurations.js'
 
- var config = allConfig();
  var width = config.sizingWidth;
  var height = config.sizingHeight;
+
+
 
  function addCSS() {
 
@@ -28,61 +29,61 @@
 
 
 
-//  function setAnimation() {
-//      //Defined Constant Animations
-//      constAnimation = {
-//          noneEffect: {
-//              0: [],
-//              1: []
-//          },
-//          slideLeftEffect: {
-//              0: [],
-//              1: []
-//          },
-//          slideRightEffect: {
-//              0: [],
-//              1: []
-//          },
-//          popEffect: {
-//              0: [],
-//              1: []
-//          },
-//          fadeEffect: {
-//              0: ["opacity: 0;"],
-//              1: ["opacity: 1;"]
-//          },
-//          flipEffect: {
-//              0: [],
-//              1: []
-//          },
-//          turnEffect: {
-//              0: [],
-//              1: []
-//          },
-//          flowEffect: {
-//              0: [],
-//              1: []
-//          },
-//          slideUpEffect: {
-//              0: [],
-//              1: []
-//          },
-//          slideDownEffect: {
-//              0: [],
-//              1: []
-//          },
-//          bubble: {
-//              0: ["transform:scale(0) !important;"],
-//              1: ["transform:scale(1) !important;"]
-//          },
-//          blur: {
-//              0: ["filter: blur(100vh);"],
-//              1: ["filter: blur(0);"]
-//          }
-//      }
-//      for (var i = 0; i < Object.keys(constAnimation).length; i++) {
-//          if (Object.keys(constAnimation)[i] === this.animation) {
-//              preAnimation = (Object.keys(constAnimation)[i]);
-//          }
-//      }
-//  }
+ //  function setAnimation() {
+ //      //Defined Constant Animations
+ //      constAnimation = {
+ //          noneEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          slideLeftEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          slideRightEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          popEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          fadeEffect: {
+ //              0: ["opacity: 0;"],
+ //              1: ["opacity: 1;"]
+ //          },
+ //          flipEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          turnEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          flowEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          slideUpEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          slideDownEffect: {
+ //              0: [],
+ //              1: []
+ //          },
+ //          bubble: {
+ //              0: ["transform:scale(0) !important;"],
+ //              1: ["transform:scale(1) !important;"]
+ //          },
+ //          blur: {
+ //              0: ["filter: blur(100vh);"],
+ //              1: ["filter: blur(0);"]
+ //          }
+ //      }
+ //      for (var i = 0; i < Object.keys(constAnimation).length; i++) {
+ //          if (Object.keys(constAnimation)[i] === this.animation) {
+ //              preAnimation = (Object.keys(constAnimation)[i]);
+ //          }
+ //      }
+ //  }

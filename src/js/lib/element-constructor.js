@@ -1,6 +1,6 @@
 import './all-configurations.js'
 
-var config = allConfig();
+//var config = allConfig();
 var bgEl = config.bgEl;
 var popupEl = config.popupEl;
 var targetOpenNewTab = config.generalTargetOpenNewTab;
@@ -28,7 +28,7 @@ function elementConstructor() {
         document.body.appendChild(this.popupEl);
     } else {
         popupEl = document.createElement("div");
-        popupEl.className = "popupEl";
+        popupEl.className = "popupEl active";
         var x = targetOpenNewTab ? targetOpenNewTab = '_blank' : '_self';
         popupEl.innerHTML = "<a href=//" + targetUrl + " target='" + x + "'><img class='itmImage' src='" + imageUrl + "'></a>";
         document.body.appendChild(popupEl);

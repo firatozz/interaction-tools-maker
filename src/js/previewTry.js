@@ -47,8 +47,10 @@ import './lib/element-constructor.js'
 //     });
 // }
 
-function showPopUp() {
+
+
+function showPopUp() { 
+
     addCSS();
-    console.log("Test");
     elementConstructor();
 }
