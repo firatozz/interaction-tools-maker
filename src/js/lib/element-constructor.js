@@ -1,12 +1,12 @@
 import './all-configurations.js'
 
 var config = allConfig();
-var bgEl = config.itmBgEl;
-var popupEl = config.itmPopupEl;
+var bgEl = config.bgEl;
+var popupEl = config.popupEl;
 var targetOpenNewTab = config.generalTargetOpenNewTab;
 var targetUrl = config.generalTargetUrl;
 var imageUrl = config.generalImageUrl;
-var closeBtnEl = config.itmCloseBtnEl;
+var closeBtnEl = config.closeBtnEl;
 
 // Add the popup to the pag
 function elementConstructor() {

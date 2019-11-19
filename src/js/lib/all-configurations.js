@@ -100,9 +100,9 @@ function allConfig(options) {
 
 
     //Global Variables
-    this.itmBgEl;
-    this.itmPopupEl;
-    this.itmCloseBtnEl;
-    this.itmShown = false;
-    this.itmTransformDefault = "";
+    this.bgEl;
+    this.popupEl;
+    this.closeBtnEl;
+    this.shown = false;
+    this.transformDefault = "";
 }
