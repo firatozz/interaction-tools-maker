@@ -1,3 +1,6 @@
+import './all-configurations.js'
+import './event-listener'
+
 var config = allConfig();
 var event = addEvent();
 var bgEl = config.itmBgEl;

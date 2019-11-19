@@ -1,3 +1,5 @@
+import './all-configurations.js'
+
 var config = allConfig();
 var displayShowAfterXPagesVisit = config.displayShowAfterXPagesVisit;
 var displayShowAfterXPagesVisitCount = config.displayShowAfterXPagesVisitCount;

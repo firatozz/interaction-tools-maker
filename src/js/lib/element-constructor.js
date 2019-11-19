@@ -1,4 +1,4 @@
-import "./all-configurations"
+import './all-configurations.js'
 
 var config = allConfig();
 var bgEl = config.itmBgEl;

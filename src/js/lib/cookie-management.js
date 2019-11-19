@@ -1,3 +1,5 @@
+import './all-configurations.js'
+
 var config = allConfig();
 var cookie_name = config.cookieCookieName;
 var cookieExp = config.cookieCookieExpiredDayCount;

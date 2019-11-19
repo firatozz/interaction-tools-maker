@@ -1,3 +1,5 @@
+import './event-listener.js'
+
 var event = addEvent();
 
 // Trigger Cofiguration > Exit Intent 
