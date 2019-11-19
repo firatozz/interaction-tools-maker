@@ -1,108 +1,217 @@
-function allConfig(options) {
+var config = {
     /* General Tab Config Variables*/
-    this.generalImageUrl = "https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png";
-    this.generalTargetUrl = "www.google.com.tr";
-    this.generalTargetOpenNewTab = true;
-    this.generalCopyCouponCode = "";
-    this.generalAutoClose = false;
-    this.generalAutoCloseDelay = 0;
-    this.generalAllowPopupDismissal = false;
-    this.generalDismissOnEsc = false;
-    this.generalDismissOnOverlayClick = true;
-    this.generalDismissOncontentClick = true;
+    generalImageUrl = "https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png",
+    generalTargetUrl = "www.google.com.tr",
+    generalTargetOpenNewTab = true,
+    generalCopyCouponCode = "",
+    generalAutoClose = false,
+    generalAutoCloseDelay = 0,
+    generalAllowPopupDismissal = false,
+    generalDismissOnEsc = false,
+    generalDismissOnOverlayClick = true,
+    generalDismissOncontentClick = true,
 
     /* Desing Tab Config Variables*/
-    this.desingOverlayVisible = true;
-    this.desingOverlayColor = "#000";
-    this.desingOverlayOpacity = 0.3;
-    this.desingBorderStyle = "solid";
-    this.desingBorderColor = "#000";
-    this.desingBorderRadius = 10;
-    this.desingBorderSize = 1;
-    this.desingShowCloseBtn = true;
-    this.desingShowCloseBtnAfterXSeconds = 0;
-    this.desingCloseBtnImage = "closebtnimg.png";
-    this.desingCloseBtnPosition = "topRight";
-    this.desingCloseBtnPositionTop = "";
-    this.desingCloseBtnPositionRight = "";
-    this.desingCloseBtnWidth = 50;
-    this.desingCloseBtnHeight = 50;
-    this.desingShadowSpread = 1;
-    this.desingShadowBlur = 12;
-    this.desingShadowColor = "#000";
+    desingOverlayVisible = true,
+    desingOverlayColor = "#000",
+    desingOverlayOpacity = 0.3,
+    desingBorderStyle = "solid",
+    desingBorderColor = "#000",
+    desingBorderRadius = 10,
+    desingBorderSize = 1,
+    desingShowCloseBtn = true,
+    desingShowCloseBtnAfterXSeconds = 0,
+    desingCloseBtnImage = "closebtnimg.png",
+    desingCloseBtnPosition = "topRight",
+    desingCloseBtnPositionTop = "",
+    desingCloseBtnPositionRight = "",
+    desingCloseBtnWidth = 50,
+    desingCloseBtnHeight = 50,
+    desingShadowSpread = 1,
+    desingShadowBlur = 12,
+    desingShadowColor = "#000",
 
     /* Trigger Configuration Tab Config Variables*/
-    this.triggerOnLoad = true;
-    this.triggerOnLoadOpeningDelay = 0;
-    this.triggerOnLoadRepetitive = false;
-    this.triggerOnScroll = false;
-    this.triggerOnScrollMoveAfterXPixel = 50;
-    this.triggerOnScrollOpeningDelay = 0;
-    this.triggerOnClick = false;
-    this.triggerOnClickSelectors = "";
-    this.triggerOnHover = false;
-    this.triggerOnHoverSelectors = "";
-    this.triggerExitIntent = false;
-    this.triggerExitIntentOpeningDelay = 0;
-    this.triggerExitIntentMobile = false;
-    this.triggerInactivity = false;
-    this.triggerInactivityExecuteAfterXSeconds = 15;
+    triggerOnLoad = true,
+    triggerOnLoadOpeningDelay = 0,
+    triggerOnLoadRepetitive = false,
+    triggerOnScroll = false,
+    triggerOnScrollMoveAfterXPixel = 50,
+    triggerOnScrollOpeningDelay = 0,
+    triggerOnClick = false,
+    triggerOnClickSelectors = "",
+    triggerOnHover = false,
+    triggerOnHoverSelectors = "",
+    triggerExitIntent = false,
+    triggerExitIntentOpeningDelay = 0,
+    triggerExitIntentMobile = false,
+    triggerInactivity = false,
+    triggerInactivityExecuteAfterXSeconds = 15,
 
     /* Position Tab Config Variables*/
-    this.positionFixed = true;
-    this.positionFixedShowPosition = "center";
-    this.positionCustom = false;
-    this.positionTop = 0;
-    this.positionLeft = 0;
-    this.positionRight = 0;
-    this.positionBottom = 0;
+    positionFixed = true,
+    positionFixedShowPosition = "center",
+    positionCustom = false,
+    positionTop = 0,
+    positionLeft = 0,
+    positionRight = 0,
+    positionBottom = 0,
 
     /* Effects Tab Config Variables*/
-    this.effectsOpeningAnimation = "fade";
-    this.effectsOpeningAnimationDuration = 800;
-    this.effectsCloseAnimation = "fade";
-    this.effectsCloseAnimationDuration = 800;
+    effectsOpeningAnimation = "fade",
+    effectsOpeningAnimationDuration = 800,
+    effectsCloseAnimation = "fade",
+    effectsCloseAnimationDuration = 800,
 
     /* Sizing Tab Config Variables*/
-    this.sizingWidth = 400;
-    this.sizingHeight = 300;
-    this.sizingAutoScalable = true;
-    this.sizingAutoSizing = true;
-    this.sizingMinWidth = 100;
-    this.sizingMaxWidth = 400;
-    this.sizingMinHeight = 75;
-    this.sizingMaxHeight = 300;
+    sizingWidth = 400,
+    sizingHeight = 300,
+    sizingAutoScalable = true,
+    sizingAutoSizing = true,
+    sizingMinWidth = 100,
+    sizingMaxWidth = 400,
+    sizingMinHeight = 75,
+    sizingMaxHeight = 300,
 
     /* Display Configuration Tab Config Variables*/
-    this.displayShowOnDesktop = true;
-    this.displayShowOnMobile = true;
-    this.displayShowOnTablet = true;
-    this.displayCanScroll = false;
-    this.displayShowOncePerSession = false;
-    this.displayShowOnlyOnce = false;
+    displayShowOnDesktop = true,
+    displayShowOnMobile = true,
+    displayShowOnTablet = true,
+    displayCanScroll = false,
+    displayShowOncePerSession = false,
+    displayShowOnlyOnce = false,
 
-    this.displayGeoTargeting = false;
-    this.displayGeoTargetingInclude = "";
-    this.displayGeoTargetingExclude = "";
+    displayGeoTargeting = false,
+    displayGeoTargetingInclude = "",
+    displayGeoTargetingExclude = "",
 
-    this.displayScheduledPopup = false;
-    this.displayScheduledPopupBeginDate = "";
-    this.displayScheduledPopupEndDate = "";
+    displayScheduledPopup = false,
+    displayScheduledPopupBeginDate = "",
+    displayScheduledPopupEndDate = "",
 
-    this.displayShowAfterXPagesVisit = false;
-    this.displayShowAfterXPagesVisitCount = 3;
+    displayShowAfterXPagesVisit = false,
+    displayShowAfterXPagesVisitCount = 3,
     //...Other Options
 
     /* Cookie Management Tab Config Variables*/
-    this.cookieUseCookie = false;
-    this.cookieCookieExpiredDayCount = 7;
-    this.cookieCookieName = "intToolMaker";
-
+    cookieUseCookie = false,
+    cookieCookieExpiredDayCount = 7,
+    cookieCookieName = "intToolMaker",
 
     //Global Variables
-    this.bgEl;
-    this.popupEl;
-    this.closeBtnEl;
-    this.shown = false;
-    this.transformDefault = "";
+    bgEl,
+    popupEl,
+    closeBtnEl,
+    shown = false,
+    transformDefault = ""
+
 }
+
+// function allConfig(options) {
+//     /* General Tab Config Variables*/
+//     generalImageUrl = "https://raw.githubusercontent.com/firatozz/firatozz.github.io/master/assets/img/javascript.png";
+//     generalTargetUrl = "www.google.com.tr";
+//     generalTargetOpenNewTab = true;
+//     generalCopyCouponCode = "";
+//     generalAutoClose = false;
+//     generalAutoCloseDelay = 0;
+//     generalAllowPopupDismissal = false;
+//     generalDismissOnEsc = false;
+//     generalDismissOnOverlayClick = true;
+//     generalDismissOncontentClick = true;
+
+//     /* Desing Tab Config Variables*/
+//     desingOverlayVisible = true;
+//     desingOverlayColor = "#000";
+//     desingOverlayOpacity = 0.3;
+//     desingBorderStyle = "solid";
+//     desingBorderColor = "#000";
+//     desingBorderRadius = 10;
+//     desingBorderSize = 1;
+//     desingShowCloseBtn = true;
+//     desingShowCloseBtnAfterXSeconds = 0;
+//     desingCloseBtnImage = "closebtnimg.png";
+//     desingCloseBtnPosition = "topRight";
+//     desingCloseBtnPositionTop = "";
+//     desingCloseBtnPositionRight = "";
+//     desingCloseBtnWidth = 50;
+//     desingCloseBtnHeight = 50;
+//     desingShadowSpread = 1;
+//     desingShadowBlur = 12;
+//     desingShadowColor = "#000";
+
+//     /* Trigger Configuration Tab Config Variables*/
+//     triggerOnLoad = true;
+//     triggerOnLoadOpeningDelay = 0;
+//     triggerOnLoadRepetitive = false;
+//     triggerOnScroll = false;
+//     triggerOnScrollMoveAfterXPixel = 50;
+//     triggerOnScrollOpeningDelay = 0;
+//     triggerOnClick = false;
+//     triggerOnClickSelectors = "";
+//     triggerOnHover = false;
+//     triggerOnHoverSelectors = "";
+//     triggerExitIntent = false;
+//     triggerExitIntentOpeningDelay = 0;
+//     triggerExitIntentMobile = false;
+//     triggerInactivity = false;
+//     triggerInactivityExecuteAfterXSeconds = 15;
+
+//     /* Position Tab Config Variables*/
+//     positionFixed = true;
+//     positionFixedShowPosition = "center";
+//     positionCustom = false;
+//     positionTop = 0;
+//     positionLeft = 0;
+//     positionRight = 0;
+//     positionBottom = 0;
+
+//     /* Effects Tab Config Variables*/
+//     effectsOpeningAnimation = "fade";
+//     effectsOpeningAnimationDuration = 800;
+//     effectsCloseAnimation = "fade";
+//     effectsCloseAnimationDuration = 800;
+
+//     /* Sizing Tab Config Variables*/
+//     sizingWidth = 400;
+//     sizingHeight = 300;
+//     sizingAutoScalable = true;
+//     sizingAutoSizing = true;
+//     sizingMinWidth = 100;
+//     sizingMaxWidth = 400;
+//     sizingMinHeight = 75;
+//     sizingMaxHeight = 300;
+
+//     /* Display Configuration Tab Config Variables*/
+//     displayShowOnDesktop = true;
+//     displayShowOnMobile = true;
+//     displayShowOnTablet = true;
+//     displayCanScroll = false;
+//     displayShowOncePerSession = false;
+//     displayShowOnlyOnce = false;
+
+//     displayGeoTargeting = false;
+//     displayGeoTargetingInclude = "";
+//     displayGeoTargetingExclude = "";
+
+//     displayScheduledPopup = false;
+//     displayScheduledPopupBeginDate = "";
+//     displayScheduledPopupEndDate = "";
+
+//     displayShowAfterXPagesVisit = false;
+//     displayShowAfterXPagesVisitCount = 3;
+//     //...Other Options
+
+//     /* Cookie Management Tab Config Variables*/
+//     cookieUseCookie = false;
+//     cookieCookieExpiredDayCount = 7;
+//     cookieCookieName = "intToolMaker";
+
+
+//     //Global Variables
+//     bgEl;
+//     popupEl;
+//     closeBtnEl;
+//     shown = false;
+//     transformDefault = "";
+// }
