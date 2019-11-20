@@ -31,3 +31,21 @@ if (canScroll) {
     }
     canScrollFunc();
 }
+
+//Display Configuration > Devices
+
+//Display Configuration > Show Rules
+
+//Display Configuration > Geo Targeting
+
+//Display Configuration > Scheduled Popup
+
+//Display Configuration > After X Pages Visit
+
+//Display Configuration > Referal Detection
+
+//Display Configuration > Spoken Language
+
+//Display Configuration > Popup by Days of Week
+
+//Display Configuration > Popup by Custom Cookie

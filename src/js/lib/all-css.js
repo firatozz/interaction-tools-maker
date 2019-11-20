@@ -84,3 +84,22 @@
      }
  }
  setAnimation();
+
+ // Design > Overlay
+ function designOverlay() {}
+
+ // Design > Border
+ function designBorder() {}
+
+ // Design > CloseButton
+ function designCloseButton() {}
+
+ // Design > Shadow
+ function designShadow() {}
+
+
+ // Position > Fixed
+ function positionFixed() {}
+
+ // Position > Custom
+ function positionCustom() {}

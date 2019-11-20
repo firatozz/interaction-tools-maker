@@ -2,6 +2,18 @@ import './event-listener.js'
 
 var event = addEvent();
 
+// Trigger Cofiguration > OnLoad
+function triggerOnLoad() {}
+
+// Trigger Cofiguration > OnScroll
+function triggerOnScroll() {}
+
+// Trigger Cofiguration > OnClick
+function triggerOnClick() {}
+
+// Trigger Cofiguration > OnHover
+function triggerOnHover() {}
+
 // Trigger Cofiguration > Exit Intent 
 function triggerExitIntent() {
     event(document, "mouseout", (e) => {
@@ -31,3 +43,8 @@ function triggerExitIntent() {
             showPopUp(); /* ATTENTION */
     });
 }
+
+// Trigger Cofiguration > Mobile Exit Intent
+
+// Trigger Cofiguration > InActivity
+function triggerInActivity() {}
