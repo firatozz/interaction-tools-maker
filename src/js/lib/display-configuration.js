@@ -45,6 +45,7 @@ if (canScroll) {
 //Display Configuration > Referal Detection
 
 //Display Configuration > Spoken Language
+function spokenLanguage(){}
 
 //Display Configuration > Popup by Days of Week
 
