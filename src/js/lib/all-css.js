@@ -11,7 +11,7 @@
          constAnimation[preAnimation][0][0] +
          "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:calc(50% - " + width / 2 + "px); top:calc(50% - " + height / 2 + "px);box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.5); z-index: 10002;}" +
          ".popupEl.active{" + constAnimation[preAnimation][1][0] + "; visibility: visible;}" +
-         ".itmImage{width:" + width + "px; height: " + height + "px;}" +
+         ".popupElImg{width:" + width + "px; height: " + height + "px;}" +
          ".closeBtnEl{position: absolute;display:inline-block;width: " + height / 50 + "%;height:" + width / 50 + "%; top: 2%;right: 4%;cursor: pointer; border-radius: 50%;}"
      );
 

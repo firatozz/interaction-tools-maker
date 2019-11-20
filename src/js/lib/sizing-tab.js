@@ -1,8 +1,6 @@
 import './all-configurations.js'
 import "./event-listener.js"
 
-var event = addEvent();
-
 var transformDefault = config.transformDefault;
 var popupEl = config.popupEl;
 
@@ -13,8 +11,8 @@ function scalePopUp() {
         height: 40
     };
     var popupSize = {
-        width: this.popupEl.offsetWidth,
-        height: this.popupEl.offsetHeight
+        width: popupEl.offsetWidth,
+        height: popupEl.offsetHeight
     };
     var windowSize = {
         width: window.innerWidth,
@@ -63,7 +61,7 @@ function scalePopUp() {
 
 function autoScalable() {
     // Handle window resizing
-    event(window, "resize", () => {
+    addEvent(window, "resize", () => {
         scalePopUp();
     });
 }

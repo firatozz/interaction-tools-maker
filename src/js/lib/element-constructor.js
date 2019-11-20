@@ -21,16 +21,11 @@ function elementConstructor() {
 
     if (document.querySelector(".popupEl")) {
         popupEl = document.querySelector(".popupEl");
-    } else if (this.customHTML) {
-        popupEl = document.createElement("div");
-        popupEl.className = "popupEl";
-        popupEl.innerHTML = this.customHTML;
-        document.body.appendChild(this.popupEl);
     } else {
         popupEl = document.createElement("div");
         popupEl.className = "popupEl active";
         var x = targetOpenNewTab ? targetOpenNewTab = '_blank' : '_self';
-        popupEl.innerHTML = "<a href=//" + targetUrl + " target='" + x + "'><img class='itmImage' src='" + imageUrl + "'></a>";
+        popupEl.innerHTML = "<a href=//" + targetUrl + " target='" + x + "'><img class='popupElImg' src='" + imageUrl + "'></a>";
         document.body.appendChild(popupEl);
     }
 
