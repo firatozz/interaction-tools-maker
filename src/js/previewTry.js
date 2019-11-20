@@ -50,7 +50,8 @@ import './lib/element-constructor.js'
 
 
 function showPopUp() { 
-
+    
+    setAnimation();
     addCSS();
     elementConstructor();
 }
