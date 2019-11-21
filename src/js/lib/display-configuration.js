@@ -41,11 +41,19 @@ if (canScroll) {
 //Display Configuration > Scheduled Popup
 
 //Display Configuration > After X Pages Visit
+function showAfterXPagesVisit() {
+    if (!(config.displayShowAfterXPagesVisit)) {
+        if (delay > 1) {
+            //...
+        }
+    }
+}
+
 
 //Display Configuration > Referal Detection
 
 //Display Configuration > Spoken Language
-function spokenLanguage(){}
+function spokenLanguage() {}
 
 //Display Configuration > Popup by Days of Week
 

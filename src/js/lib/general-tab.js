@@ -21,6 +21,7 @@ function clearBody() {
     popupEl.remove();
 }
 
+
 function dismissOnOverlayClick() {
     // Handle the popup click overlay
     addEvent(bgEl, "click", () => {
@@ -42,7 +43,7 @@ function dismissOnContentClick() {
 
 function dismissOnCloseBtnClick() {
     // Handle the popup close button
-    addEvent(this.closeBtnEl, "click", () => {
+    addEvent(closeBtnEl, "click", () => {
         hidePopUp(); /* ATTENTION */
         setTimeout(() => {
             clearBody() /* ATTENTION */
