@@ -1,15 +1,29 @@
 import './lib/element-constructor.js'
 import './lib/all-configurations.js'
 import './lib/cookie-management.js'
+import './lib/event-listener.js'
+import './lib/general-tab.js'
 import './lib/sizing-tab.js'
 import './lib/all-css.js'
+
+// Configuration
+var delay;
+if (config.generalAutoClose) {
+    delay = config.generalAutoCloseDelay;
+    console.log(generalAutoCloseDelay);
+}
+
+if (config.generalDismissOnOverlayClick) {
+    dismissOnOverlayClick();
+    console.log("dismissOnOverlayClick worked.");
+}
 
 /** Loading... */
 function showPopUp() {
     if (config.shown) return;
 
     if (!(config.displayShowAfterXPagesVisit)) {
-        if (this.delay > 1) {
+        if (delay > 1) {
             this.canScroll = true;
         }
         console.log("Geçti");
@@ -17,7 +31,7 @@ function showPopUp() {
             config.bgEl.style.display = "block";
             config.popupEl.className = "popupEl active";
             config.shown = true;
-        }, 1 * 1000);
+        }, delay * 1000);
     }
 
     // Handle scaling
@@ -38,8 +52,6 @@ function setOptions() {
     //     this[Object.keys(options)[i]] = options[Object.keys(options)[i]];
     // }
     setAnimation();
-
-    addCSS();
     domReady(() => {
         if (checkCookie()) return;
         addCSS();

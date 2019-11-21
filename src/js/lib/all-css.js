@@ -44,7 +44,7 @@
              0: [],
              1: []
          },
-         fade: {
+         fadeEffect: {
              0: ["opacity: 0;"],
              1: ["opacity: 1;"]
          },

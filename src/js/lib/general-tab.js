@@ -1,8 +1,6 @@
 import './all-configurations.js'
 import './event-listener.js'
 
-var event = addEvent();
-
 var bgEl = config.bgEl;
 var closeBtnEl = config.closeBtnEl;
 var popupEl = config.popupEl;
@@ -11,14 +9,11 @@ var autoCloseDelay = config.generalAutoCloseDelay;
 
 
 function hidePopUp() {
-
     bgEl.style.display = "none";
-    popupEl.className = "itmPopupEl";
-
+    popupEl.className = "popupEl";
     // Set body overflow back to default to show scrollbars
     document.body.style.overflow = "auto";
 }
-
 
 //For Dismiss func
 function clearBody() {
@@ -26,20 +21,20 @@ function clearBody() {
     popupEl.remove();
 }
 
-
 function dismissOnOverlayClick() {
     // Handle the popup click overlay
-    event(bgEl, "click", () => {
-        hidePopUp(); /* ATTENTION */
+    addEvent(bgEl, "click", () => {
+        hidePopUp();
         setTimeout(() => {
-            clearBody() /* ATTENTION */
+            clearBody()
         }, 1000);
     });
 }
 
+
 function dismissOnContentClick() {
     // If targetOpenNewTab have worked, the box will close
-    event(closeBtnEl, "click", () => {
+    addEvent(closeBtnEl, "click", () => {
         clearBody(); /* ATTENTION */
         document.body.style.overflow = "visible";
     });
@@ -47,7 +42,7 @@ function dismissOnContentClick() {
 
 function dismissOnCloseBtnClick() {
     // Handle the popup close button
-    event(this.closeBtnEl, "click", () => {
+    addEvent(this.closeBtnEl, "click", () => {
         hidePopUp(); /* ATTENTION */
         setTimeout(() => {
             clearBody() /* ATTENTION */
@@ -56,7 +51,7 @@ function dismissOnCloseBtnClick() {
 }
 
 function dismissAutoClose() {
-    event(bgEl, "mousemove", () => {
+    addEvent(bgEl, "mousemove", () => {
         if (autoClose) {
             setTimeout(() => {
                 hidePopUp(); /* ATTENTION */

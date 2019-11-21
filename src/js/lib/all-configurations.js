@@ -4,7 +4,7 @@ var config = {
     generalTargetUrl = "www.google.com.tr",
     generalTargetOpenNewTab = true,
     generalCopyCouponCode = "",
-    generalAutoClose = false,
+    generalAutoClose = true,
     generalAutoCloseDelay = 0,
     generalAllowPopupDismissal = false,
     generalDismissOnEsc = false,
@@ -58,9 +58,9 @@ var config = {
     positionBottom = 0,
 
     /* Effects Tab Config Variables*/
-    effectsOpeningAnimation = "fade",
+    effectsOpeningAnimation = "fadeEffect",
     effectsOpeningAnimationDuration = 800,
-    effectsCloseAnimation = "fade",
+    effectsCloseAnimation = "fadeEffect",
     effectsCloseAnimationDuration = 800,
 
     /* Sizing Tab Config Variables*/
