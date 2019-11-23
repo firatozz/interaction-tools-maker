@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../assets/plugins/prism/prism.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-colorpicker.min.css">
 </head>
 
 <body>
@@ -53,7 +54,7 @@
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
 
-                <div class="tab-pane show active" id="list-general" role="tabpanel" aria-labelledby="list-general-list">
+                <div class="tab-pane fade" id="list-general" role="tabpanel" aria-labelledby="list-general-list">
                     <div class="card card-body">
 
                         <div class="card card-body  mb-3">
@@ -145,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
+                <div class="tab-pane show active" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
                     <div class="card card-body">
 
                         <div class="card card-body mb-3">
@@ -163,9 +164,10 @@
                             <div class="form-group row">
                                 <label for="overlayOpacity" class="col-5 ml-2 mb-1 col-form-label">Overlay
                                     Opacity</label>
-                                <div class="col-6">
-                                    <input type="range" class="custom-range" min="0" max="1" step="0.01"
+                                <div class="col-6 container row">
+                                    <input type="range" class="custom-range" value="0.3" min="0" max="1" step="0.01"
                                         id="overlayOpacity">
+                                    <span id="overlayOpacityValue" for="overlayOpacity">0.3</span>
                                 </div>
                             </div>
                         </div>
@@ -885,7 +887,14 @@
 <script type="text/javascript" src="../../assets/plugins/prism/prism.js"></script>
 <script type="text/javascript" src="../../assets/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../assets/bootstrap-colorpicker.min.js"></script>
+<script type="text/javascript" src="../../assets/popper.min.js"></script>
 <script type="text/javascript" src="../../dist/js/lib/log.js"></script>
 <script type="text/javascript" src="../../dist/js/preview.js"></script>
+<script>
+ $(function () {
+      // Basic instantiation:
+      $('#demo').colorpicker();});
+</script>
 
 </html>

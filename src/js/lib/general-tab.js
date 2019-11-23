@@ -4,7 +4,6 @@ import './event-listener.js'
 var bgEl = config.bgEl;
 var closeBtnEl = config.closeBtnEl;
 var popupEl = config.popupEl;
-var autoClose = config.generalAutoClose;
 
 function hidePopUp() {
     bgEl.style.display = "none";
@@ -17,6 +16,7 @@ function hidePopUp() {
 function clearBody() {
     bgEl.remove();
     popupEl.remove();
+    document.querySelector("#itmStyles").remove();
 }
 
 function dismissOnOverlayClick() {

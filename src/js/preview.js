@@ -6,8 +6,6 @@ import './lib/general-tab.js'
 import './lib/sizing-tab.js'
 import './lib/all-css.js'
 
-addCSS();
-
 // Configuration
 
 //loadEvents();
@@ -25,6 +23,7 @@ function setOptions() {
         if (config.shown) return;
 
         setTimeout(() => {
+            
             document.querySelector(".bgEl").style.display = "block";
             document.querySelector(".popupEl").className = "popupEl active";
             // Save body overflow value and hide scrollbars
@@ -36,7 +35,7 @@ function setOptions() {
 
         //loadEvents();
     });
-
+    addCSS();
     elementConstructor();
     scalePopUp(); // ??
     dismissOnCloseBtnClick();

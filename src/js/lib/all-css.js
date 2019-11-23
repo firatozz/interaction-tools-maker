@@ -2,11 +2,38 @@
 
  var width = config.sizingWidth;
  var height = config.sizingHeight;
+ var opacity = config.desingOverlayOpacity;
+
+ // Design > Overlay
+ function designOverlay() {
+     addEvent(document.getElementById("overlayOpacity"), "input", function () {
+         document.getElementById("overlayOpacityValue").innerHTML = document.getElementById("overlayOpacity").value;
+         opacity = document.getElementById("overlayOpacity").value;
+     }, false);
+     
+ }
+ designOverlay();
+
+ // Design > Border
+ function designBorder() {}
+
+ // Design > CloseButton
+ function designCloseButton() {}
+
+ // Design > Shadow
+ function designShadow() {}
+
+
+ // Position > Fixed
+ function positionFixed() {}
+
+ // Position > Custom
+ function positionCustom() {}
 
  function addCSS() {
 
      var css = document.createTextNode(
-         ".bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.4; z-index: 10001;}" +
+         ".bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity:" + opacity + "; z-index: 10001;}" +
          ".popupEl{display: block; position: fixed; width: " + width + "px; height: " + height + "px; z-index: 10002;" +
          constAnimation[preAnimation][0][0] +
          "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:calc(50% - " + width / 2 + "px); top:calc(50% - " + height / 2 + "px);box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.5); z-index: 10002;}" +
@@ -17,6 +44,7 @@
 
      // Create the style element
      var style = document.createElement("style");
+     style.id = "itmStyles";
      style.type = "text/css";
      style.appendChild(css);
      // Insert it before other existing style
@@ -84,22 +112,3 @@
      }
  }
  setAnimation();
-
- // Design > Overlay
- function designOverlay() {}
-
- // Design > Border
- function designBorder() {}
-
- // Design > CloseButton
- function designCloseButton() {}
-
- // Design > Shadow
- function designShadow() {}
-
-
- // Position > Fixed
- function positionFixed() {}
-
- // Position > Custom
- function positionCustom() {}
