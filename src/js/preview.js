@@ -9,13 +9,6 @@ import './lib/all-css.js'
 addCSS();
 
 // Configuration
-var delay;
-if (config.generalAutoClose) {
-    delay = config.generalAutoCloseDelay;
-    console.log(generalAutoCloseDelay);
-}
-
-
 
 //loadEvents();
 
@@ -32,28 +25,43 @@ function setOptions() {
         if (config.shown) return;
 
         setTimeout(() => {
-
             document.querySelector(".bgEl").style.display = "block";
             document.querySelector(".popupEl").className = "popupEl active";
-
             // Save body overflow value and hide scrollbars
             if (!(config.displayCanScroll)) {
                 document.body.style.overflow = "hidden";
             }
-
-            //config.shown = true;
-        }, delay * 1000);
-        elementConstructor();
+            (config.shown) = true;
+        }, 0);
 
         //loadEvents();
     });
 
+    elementConstructor();
+    scalePopUp(); // ??
     dismissOnCloseBtnClick();
 
-    scalePopUp(); // ??
+    //General Tab  Configuration Setup
+    if (config.generalAllowPopupDismissal) {
+        dismissOnOverlayClick();
+        dismissOnContentClick();
+        dismissOnEscClick();
+        dismissAutoClose();
+    }
 
     if (config.generalDismissOnOverlayClick) {
         dismissOnOverlayClick();
-        console.log("dismissOnOverlayClick worked.");
+    }
+
+    if (config.generalDismissOncontentClick) {
+        dismissOnContentClick();
+    }
+
+    if (config.generalAutoClose) {
+        dismissAutoClose();
+    }
+
+    if (config.generalDismissOnEsc) {
+        dismissOnEscClick();
     }
 }

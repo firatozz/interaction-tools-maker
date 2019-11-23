@@ -12,10 +12,14 @@ var closeBtnEl = config.closeBtnEl;
 function elementConstructor() {
 
     // Add the background div
-
-    bgEl = document.createElement("div");
-    bgEl.className = "bgEl";
-    document.body.appendChild(bgEl);
+    if (document.querySelector(".bgEl")) {
+        bgEl = document.querySelector(".bgEl");
+    } else {
+        bgEl = document.createElement("div");
+        bgEl.className = "bgEl";
+        bgEl.style.display = "block";
+        document.body.appendChild(bgEl);
+    }
 
     //Add the popup
 

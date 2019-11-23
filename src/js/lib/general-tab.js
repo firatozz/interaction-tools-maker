@@ -5,8 +5,6 @@ var bgEl = config.bgEl;
 var closeBtnEl = config.closeBtnEl;
 var popupEl = config.popupEl;
 var autoClose = config.generalAutoClose;
-var autoCloseDelay = config.generalAutoCloseDelay;
-
 
 function hidePopUp() {
     bgEl.style.display = "none";
@@ -21,7 +19,6 @@ function clearBody() {
     popupEl.remove();
 }
 
-
 function dismissOnOverlayClick() {
     // Handle the popup click overlay
     addEvent(bgEl, "click", () => {
@@ -32,34 +29,44 @@ function dismissOnOverlayClick() {
     });
 }
 
-
 function dismissOnContentClick() {
     // If targetOpenNewTab have worked, the box will close
-    addEvent(closeBtnEl, "click", () => {
-        clearBody(); /* ATTENTION */
-        document.body.style.overflow = "visible";
+    addEvent(popupEl, "click", () => {
+        hidePopUp();
+        setTimeout(() => {
+            clearBody()
+        }, 1000);
     });
 }
 
 function dismissOnCloseBtnClick() {
     // Handle the popup close button
     addEvent(closeBtnEl, "click", () => {
-        hidePopUp(); /* ATTENTION */
+        hidePopUp();
         setTimeout(() => {
-            clearBody() /* ATTENTION */
+            clearBody()
         }, 1000);
     });
 }
 
 function dismissAutoClose() {
     addEvent(bgEl, "mousemove", () => {
-        if (autoClose) {
+        setTimeout(() => {
+            hidePopUp();
             setTimeout(() => {
-                hidePopUp(); /* ATTENTION */
-                setTimeout(() => {
-                    clearBody() /* ATTENTION */
-                }, 800);
-            }, autoCloseDelay * 1000);
+                clearBody()
+            }, 800);
+        }, (config.generalAutoCloseDelay) * 1000);
+    });
+}
+
+function dismissOnEscClick() {
+    addEvent(document.querySelector("body"), "keydown", (e) => {
+        if (e.key === "Escape") {
+            hidePopUp();
+            setTimeout(() => {
+                clearBody()
+            }, 1000);
         }
     });
 }
