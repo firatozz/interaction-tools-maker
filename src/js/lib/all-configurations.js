@@ -17,7 +17,7 @@ var config = {
     desingOverlayOpacity = 0.3,
     desingBorderStyle = "solid",
     desingBorderColor = "#000",
-    desingBorderRadius = 10,
+    desingBorderRadius = 0,
     desingBorderSize = 1,
     desingShowCloseBtn = true,
     desingShowCloseBtnAfterXSeconds = 0,
@@ -27,9 +27,9 @@ var config = {
     desingCloseBtnPositionRight = "",
     desingCloseBtnWidth = 50,
     desingCloseBtnHeight = 50,
-    desingShadowSpread = 1,
-    desingShadowBlur = 12,
-    desingShadowColor = "#000",
+    desingShadowSpread = 5,
+    desingShadowBlur = 5,
+    desingShadowColor = "rgba(0, 0, 0, .2)",
 
     /* Trigger Configuration Tab Config Variables*/
     triggerOnLoad = true,
