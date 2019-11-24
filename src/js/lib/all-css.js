@@ -9,9 +9,15 @@
  var borderRadius = config.desingBorderRadius;
  var borderColor = config.desingBorderColor;
  var borderSize = config.desingBorderSize;
- var desingShadowSpread = config.desingShadowSpread;
- var desingShadowBlur = config.desingShadowBlur;
- var desingShadowColor = config.desingShadowColor;
+ var shadowSpread = config.desingShadowSpread;
+ var shadowBlur = config.desingShadowBlur;
+ var shadowColor = config.desingShadowColor;
+ var closeBtnPosition = config.desingCloseBtnPosition;
+ var clsBtnPosTop = config.desingCloseBtnPositionTop;
+ var clsBtnPosRight = config.desingCloseBtnPositionRight;
+ var clsBtnWidth = config.desingCloseBtnWidth;
+ var clsBtnHeight = config.desingCloseBtnHeight;
+ var showCloseBtnAfterXSeconds = config.showCloseBtnAfterXSeconds;
 
 
  // Design > Overlay
@@ -58,17 +64,14 @@
  }
  designBorder();
 
- // Design > CloseButton
- function designCloseButton() {}
-
  // Design > Shadow
  function designShadow() {
      addEvent(document.querySelector("#shadowSpread"), "input", function () {
-         desingShadowSpread = document.querySelector("#shadowSpread").value;
+         shadowSpread = document.querySelector("#shadowSpread").value;
      });
 
      addEvent(document.querySelector("#shadowBlur"), "input", function () {
-         desingShadowBlur = document.querySelector("#shadowBlur").value;
+         shadowBlur = document.querySelector("#shadowBlur").value;
      });
 
      var picker = new CP(document.querySelector('#shadowColor'));
@@ -77,7 +80,7 @@
      function change() {
          var v = CP._HSV2RGB(picker.set());
          v = this.value == 1 ? 'rgb(' + v.join(', ') + ')' : 'rgba(' + v.join(', ') + ', ' + this.value.replace(/^0\./, '.') + ')';
-         desingShadowColor = v;
+         shadowColor = v;
      }
      alpha.type = 'range';
      alpha.min = 0;
@@ -91,10 +94,51 @@
          var v = CP.HEX2RGB(color);
          v = alpha.value == 1 ? 'rgb(' + v.join(', ') + ')' : 'rgba(' + v.join(', ') + ', ' + alpha.value.replace(/^0\./, '.') + ')';
          document.querySelector('#shadowColor').value = v;
-         desingShadowColor = v;
+         shadowColor = v;
      });
  }
  designShadow();
+
+ // Design > CloseButton
+ function designCloseButton() {
+     closeBtnPosition = "top:5px; right:5px;";
+     clsBtnWidth = height / 50 + "%";
+     clsBtnHeight = width / 50 + "%";
+     clsVisibility = "hidden";
+
+     addEvent(document.querySelector("#clsBtnPosition"), "input", function () {
+         clsBtnPosTop = "";
+         clsBtnPosRight = "";
+         closeBtnPosition = document.querySelector("#clsBtnPosition").value;
+     });
+
+     addEvent(document.querySelector("#clsBtnPosTop"), "input", function () {
+         clsBtnPosTop = document.querySelector("#clsBtnPosTop").value + "px";
+         closeBtnPosition = "";
+     });
+
+     addEvent(document.querySelector("#clsBtnPosRight"), "input", function () {
+         clsBtnPosRight = document.querySelector("#clsBtnPosRight").value + "px; left:unset;";
+         closeBtnPosition = "";
+     });
+
+     addEvent(document.querySelector("#clsBtnWidth"), "input", function () {
+         clsBtnWidth = document.querySelector("#clsBtnWidth").value + "px;";
+         console.log(clsBtnWidth);
+     });
+
+     addEvent(document.querySelector("#clsBtnHeight"), "input", function () {
+         clsBtnHeight = document.querySelector("#clsBtnHeight").value + "px;";
+         console.log(clsBtnHeight);
+     });
+
+    //  addEvent(document.querySelector("#showCloseBtnAfterXSeconds"), "input", function () {
+    //      showCloseBtnAfterXSeconds = document.querySelector("#showCloseBtnAfterXSeconds").value;
+    //      console.log(showCloseBtnAfterXSeconds);
+    //      setTimeout(function(){clsVisibility="visible";},showCloseBtnAfterXSeconds*1000);
+    //  });
+ }
+ designCloseButton();
 
 
  // Position > Fixed
@@ -109,10 +153,10 @@
          ".bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: " + overlayColor + "; opacity:" + opacity + "; z-index: 10001;}" +
          ".popupEl{display: block; position: fixed; width: " + width + "px; height: " + height + "px; z-index: 10002;box-sizing:content-box; border: " + borderSize + "px " + borderStyle + " " + borderColor + "; border-radius:" + borderRadius + "px; " +
          constAnimation[preAnimation][0][0] +
-         "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:calc(50% - " + width / 2 + "px); top:calc(50% - " + height / 2 + "px);box-shadow: 0px 0px " + desingShadowBlur + "px " + desingShadowSpread + "px " + desingShadowColor + "; z-index: 10002;}" +
+         "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:calc(50% - " + width / 2 + "px); top:calc(50% - " + height / 2 + "px);box-shadow: 0px 0px " + shadowBlur + "px " + shadowSpread + "px " + shadowColor + "; z-index: 10002;}" +
          ".popupEl.active{" + constAnimation[preAnimation][1][0] + "; visibility: visible;}" +
          ".popupElImg{width:" + width + "px; height: " + height + "px; border-radius:" + borderRadius + "px; }" +
-         ".closeBtnEl{position: absolute;display:inline-block;width: " + height / 50 + "%;height:" + width / 50 + "%; top: 2%;right: 4%;cursor: pointer; border-radius: 50%;}"
+         ".closeBtnEl{position: absolute;display:inline-block;visibility:" + clsVisibility + "; width: " + clsBtnWidth + ";height:" + clsBtnHeight + "; cursor: pointer; top:" + clsBtnPosTop + "; right:" + clsBtnPosRight + "; border-radius: 50%;" + closeBtnPosition + "}"
      );
 
      // Create the style element
