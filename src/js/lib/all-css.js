@@ -17,7 +17,7 @@
  var clsBtnPosRight = config.desingCloseBtnPositionRight;
  var clsBtnWidth = config.desingCloseBtnWidth;
  var clsBtnHeight = config.desingCloseBtnHeight;
- var showCloseBtnAfterXSeconds = config.showCloseBtnAfterXSeconds;
+ var showCloseBtnAfterXSeconds = config.desingShowCloseBtnAfterXSeconds;
 
 
  // Design > Overlay
@@ -104,7 +104,7 @@
      closeBtnPosition = "top:5px; right:5px;";
      clsBtnWidth = height / 50 + "%";
      clsBtnHeight = width / 50 + "%";
-     clsVisibility = "hidden";
+     clsVisibility = "visible";
 
      addEvent(document.querySelector("#clsBtnPosition"), "input", function () {
          clsBtnPosTop = "";
@@ -132,11 +132,12 @@
          console.log(clsBtnHeight);
      });
 
-    //  addEvent(document.querySelector("#showCloseBtnAfterXSeconds"), "input", function () {
-    //      showCloseBtnAfterXSeconds = document.querySelector("#showCloseBtnAfterXSeconds").value;
-    //      console.log(showCloseBtnAfterXSeconds);
-    //      setTimeout(function(){clsVisibility="visible";},showCloseBtnAfterXSeconds*1000);
-    //  });
+     addEvent(document.querySelector("#showCloseBtnAfterXSeconds"), "input", function () {
+         clsVisibility = "hidden";
+         showCloseBtnAfterXSeconds = document.querySelector("#showCloseBtnAfterXSeconds").value;
+         console.log(showCloseBtnAfterXSeconds);
+     });
+
  }
  designCloseButton();
 

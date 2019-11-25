@@ -23,7 +23,7 @@ function setOptions() {
         if (config.shown) return;
 
         setTimeout(() => {
-            
+
             document.querySelector(".bgEl").style.display = "block";
             document.querySelector(".popupEl").className = "popupEl active";
             // Save body overflow value and hide scrollbars
@@ -39,6 +39,13 @@ function setOptions() {
     elementConstructor();
     scalePopUp(); // ??
     dismissOnCloseBtnClick();
+
+    function closeBtnShowingTimer() {
+        setTimeout(function () {
+            document.querySelector(".closeBtnEl").setAttribute("style", "visibility:visible");
+        }, showCloseBtnAfterXSeconds * 1000);
+    };
+    closeBtnShowingTimer();
 
     //General Tab  Configuration Setup
     if (config.generalAllowPopupDismissal) {
