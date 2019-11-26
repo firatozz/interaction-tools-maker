@@ -71,7 +71,4 @@ function setOptions() {
     if (config.generalDismissOnEsc) {
         dismissOnEscClick();
     }
-    if(config.triggerOnScroll){
-        triggerOnScroll();
-    }
 }
