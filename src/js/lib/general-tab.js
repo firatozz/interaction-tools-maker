@@ -45,6 +45,7 @@ function dismissOnCloseBtnClick() {
         hidePopUp();
         setTimeout(() => {
             clearBody()
+            
         }, 1000);
     });
 }

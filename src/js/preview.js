@@ -1,10 +1,11 @@
-import './lib/element-constructor.js'
-import './lib/all-configurations.js'
-import './lib/cookie-management.js'
-import './lib/event-listener.js'
-import './lib/general-tab.js'
-import './lib/sizing-tab.js'
 import './lib/all-css.js'
+import './lib/sizing-tab.js'
+import './lib/general-tab.js'
+import './lib/event-listener.js'
+import './lib/cookie-management.js'
+import './lib/all-configurations.js'
+import './lib/element-constructor.js'
+import './lib/trigger-configuration.js'
 
 // Configuration
 
@@ -69,5 +70,8 @@ function setOptions() {
 
     if (config.generalDismissOnEsc) {
         dismissOnEscClick();
+    }
+    if(config.triggerOnScroll){
+        triggerOnScroll();
     }
 }

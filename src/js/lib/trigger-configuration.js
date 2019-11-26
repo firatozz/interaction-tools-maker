@@ -1,12 +1,22 @@
+import './all-configurations.js'
 import './event-listener.js'
 
-var event = addEvent();
 
 // Trigger Cofiguration > OnLoad
 function triggerOnLoad() {}
 
 // Trigger Cofiguration > OnScroll
-function triggerOnScroll() {}
+function triggerOnScroll() {
+    if (config.triggerOnScroll) {
+        addEvent(document.querySelector("#openingAfterXScroll"), "input", function () {
+            window.onscroll = function (e) {
+                if (window.scrollY > document.querySelector("#openingAfterXScroll").value) {
+                    console.log(window.scrollY);
+                }
+            };
+        });
+    }
+}
 
 // Trigger Cofiguration > OnClick
 function triggerOnClick() {}
@@ -16,7 +26,7 @@ function triggerOnHover() {}
 
 // Trigger Cofiguration > Exit Intent 
 function triggerExitIntent() {
-    event(document, "mouseout", (e) => {
+    addEvent(document, "mouseout", (e) => {
         e = e ? e : window.event;
 
         // If this is an autocomplete element.

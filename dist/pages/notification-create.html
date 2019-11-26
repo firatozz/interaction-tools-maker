@@ -31,11 +31,11 @@
     <div class="container col-9 row m-auto">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-general-list" data-toggle="list"
+                <a class="list-group-item list-group-item-action" id="list-general-list" data-toggle="list"
                     href="#list-general" role="tab" aria-controls="general">General</a>
                 <a class="list-group-item list-group-item-action" id="list-design-list" data-toggle="list"
                     href="#list-design" role="tab" aria-controls="design">Design</a>
-                <a class="list-group-item list-group-item-action" id="list-triggerConfiguration-list" data-toggle="list"
+                <a class="list-group-item list-group-item-action active" id="list-triggerConfiguration-list" data-toggle="list"
                     href="#list-triggerConfiguration" role="tab" aria-controls="triggerConfiguration">Trigger
                     Configuration</a>
                 <a class="list-group-item list-group-item-action" id="list-position-list" data-toggle="list"
@@ -146,7 +146,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane show active" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
+                <div class="tab-pane fade" id="list-design" role="tabpanel" aria-labelledby="list-design-list">
                     <div class="card card-body">
 
                         <div class="card card-body mb-3">
@@ -201,27 +201,18 @@
 
                         <div class="card card-body mb-3">
                             <div class="container row">
-                                <div class="form-group col-6 custom-control custom-switch">
+                                <div class="form-group col-12 custom-control custom-switch">
                                     <input type="checkbox" checked class="custom-control-input" id="showCloseButton">
                                     <label class="custom-control-label" for="showCloseButton">Show Close Button</label>
                                 </div>
-                                <div class="form-group col-6 row">
-                                    <label for="showCloseBtnAfterXSeconds" class="col-form-label col-4">Show
-                                        After</label>
-                                    <input type="text" class="form-control col-4" id="showCloseBtnAfterXSeconds"
-                                        placeholder="0">
-                                    <label for="showCloseBtnAfterXSeconds" class="col-form-label col-4">seconds</label>
-                                </div>
                                 <div class="form-group col-6">
-                                    <label for="closeBtnImage" class="col-form-label">Button Image</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Upload</span>
-                                        </div>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="closeBtnImage">
-                                            <label class="custom-file-label" for="closeBtnImage">Choose file</label>
-                                        </div>
+                                    <label for="showCloseBtnAfterXSeconds" class="col-form-label">Show
+                                        After</label>
+                                    <div class="form-group col-12 row">
+                                        <input type="text" class="form-control col-8" id="showCloseBtnAfterXSeconds"
+                                            placeholder="0">
+                                        <label for="showCloseBtnAfterXSeconds"
+                                            class="col-form-label col-4">seconds</label>
                                     </div>
                                 </div>
                                 <div class="form-group col-6">
@@ -271,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-triggerConfiguration" role="tabpanel"
+                <div class="tab-pane show active" id="list-triggerConfiguration" role="tabpanel"
                     aria-labelledby="list-triggerConfiguration-list">
                     <div class="card card-body">
 
@@ -300,10 +291,10 @@
                                     <label class="custom-control-label" for="onScrollEvent">On Scroll</label>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="openingAfterPos" class="col-form-label col-4">After</label>
-                                    <input type="text" class="form-control col-4" id="openingAfterPos" placeholder="5">
+                                    <label for="openingAfterXScroll" class="col-form-label col-4">After</label>
+                                    <input type="text" class="form-control col-4" id="openingAfterXScroll" placeholder="500">
                                     <div class="form-group col-4">
-                                        <select class="form-control" id="openingAfterPosSelected">
+                                        <select class="form-control" id="openingAfterXScrollSelected">
                                             <option>px</option>
                                             <option>%</option>
                                         </select>
