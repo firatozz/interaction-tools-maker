@@ -57,11 +57,11 @@ function scalePopUp() {
     // Apply the scale transformation
     popupEl.style.transform = transformDefault + " scale(" + scaleTo + ")";
 }
-
+ 
 
 function autoScalable() {
     // Handle window resizing
     addEvent(window, "resize", () => {
         scalePopUp();
-    });
+    }); 
 }
