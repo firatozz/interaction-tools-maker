@@ -35,10 +35,10 @@
                     href="#list-general" role="tab" aria-controls="general">General</a>
                 <a class="list-group-item list-group-item-action" id="list-design-list" data-toggle="list"
                     href="#list-design" role="tab" aria-controls="design">Design</a>
-                <a class="list-group-item list-group-item-action active" id="list-triggerConfiguration-list" data-toggle="list"
+                <a class="list-group-item list-group-item-action" id="list-triggerConfiguration-list" data-toggle="list"
                     href="#list-triggerConfiguration" role="tab" aria-controls="triggerConfiguration">Trigger
                     Configuration</a>
-                <a class="list-group-item list-group-item-action" id="list-position-list" data-toggle="list"
+                <a class="list-group-item list-group-item-action active" id="list-position-list" data-toggle="list"
                     href="#list-position" role="tab" aria-controls="position">Position</a>
                 <a class="list-group-item list-group-item-action" id="list-effects-list" data-toggle="list"
                     href="#list-effects" role="tab" aria-controls="effects">Effects</a>
@@ -262,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane show active" id="list-triggerConfiguration" role="tabpanel"
+                <div class="tab-pane fade" id="list-triggerConfiguration" role="tabpanel"
                     aria-labelledby="list-triggerConfiguration-list">
                     <div class="card card-body">
 
@@ -292,7 +292,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="openingAfterXScroll" class="col-form-label col-4">After</label>
-                                    <input type="text" class="form-control col-4" id="openingAfterXScroll" placeholder="500">
+                                    <input type="text" class="form-control col-4" id="openingAfterXScroll"
+                                        placeholder="500">
                                     <div class="form-group col-4">
                                         <select class="form-control" id="openingAfterXScrollSelected">
                                             <option>px</option>
@@ -470,7 +471,8 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="list-position" role="tabpanel" aria-labelledby="list-position-list">
+                <div class="tab-pane show active" id="list-position" role="tabpanel"
+                    aria-labelledby="list-position-list">
                     <div class="card card-body">
                         <div class="card card-body mb-3">
                             <div class="row">
@@ -483,32 +485,32 @@
                                 </div>
                                 <div class="col-8">
                                     <div class="list-group">
-                                        <div class="row">
-                                            <button type="button"
+                                        <div class="row" id=fixedPositionGroup>
+                                            <button id="fixedPositionTopLeft" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Top
                                                 Left</button>
-                                            <button type="button"
+                                            <button id="fixedPositionTopCenter" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Top
                                                 Center</button>
-                                            <button type="button"
+                                            <button id="fixedPositionTopRight" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Top
                                                 Right</button>
-                                            <button type="button"
+                                            <button id="fixedPositionMiddleLeft" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Middle
                                                 Left</button>
-                                            <button type="button"
+                                            <button id="fixedPositionCenter" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Center
                                             </button>
-                                            <button type="button"
+                                            <button id="fixedPositionMiddleRight" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Middle
                                                 Right</button>
-                                            <button type="button"
+                                            <button id="fixedPositionBottomLeft" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Bottom
                                                 Left</button>
-                                            <button type="button"
+                                            <button id="fixedPositionBottomCenter" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Botton
                                                 Center</button>
-                                            <button type="button"
+                                            <button id="fixedPositionBottomRight" type="button"
                                                 class="col-4 list-group-item list-group-item-action">Bottom
                                                 Right</button>
                                         </div>
@@ -521,25 +523,15 @@
                                 <input type="radio" id="radioFixed2" name="radioPosition" class="custom-control-input">
                                 <label class="custom-control-label" for="radioFixed2">Custom</label>
                             </div>
-                            <div class="row">
+                            <div class="row" id="customPositionCard">
                                 <div class="form-group col-6 mt-3 row">
                                     <label for="posTop" class="ml-2 mb-1 col-form-label col-3">Top</label>
-                                    <input type="text" class="form-control col-6 ml-2" id="posTop" placeholder="">
+                                    <input type="text" class="form-control col-6 ml-2" id="posCustomTop" placeholder="">
                                     <label class="col-form-label ml-2" for="">px</label>
                                 </div>
                                 <div class="form-group col-6 mt-3 row">
                                     <label for="posLeft" class="ml-2 mb-1 col-form-label col-3">Left</label>
-                                    <input type="text" class="form-control col-6 ml-2" id="posLeft" placeholder="">
-                                    <label class="col-form-label ml-2" for="">px</label>
-                                </div>
-                                <div class="form-group col-6 mt-3 row">
-                                    <label for="posRight" class="ml-2 mb-1 col-form-label col-3">Right</label>
-                                    <input type="text" class="form-control col-6 ml-2" id="posRight" placeholder="">
-                                    <label class="col-form-label ml-2" for="">px</label>
-                                </div>
-                                <div class="form-group col-6 mt-3 row">
-                                    <label for="posBottom" class="ml-2 mb-1 col-form-label col-3">Bottom</label>
-                                    <input type="text" class="form-control col-6 ml-2" id="posBottom" placeholder="">
+                                    <input type="text" class="form-control col-6 ml-2" id="posCustomLeft" placeholder="">
                                     <label class="col-form-label ml-2" for="">px</label>
                                 </div>
                             </div>

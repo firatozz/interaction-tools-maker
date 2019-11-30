@@ -6,16 +6,14 @@ import './event-listener.js'
 function triggerOnLoad() {}
 
 // Trigger Cofiguration > OnScroll
-function triggerOnScroll() {
-    if (config.triggerOnScroll) {
-        addEvent(document.querySelector("#openingAfterXScroll"), "input", function () {
-            window.onscroll = function (e) {
-                if (window.scrollY > document.querySelector("#openingAfterXScroll").value) {
-                    console.log(window.scrollY);
-                }
-            };
-        });
-    }
+function triggerOnScrollFunc() {
+    addEvent(document.querySelector("#openingAfterXScroll"), "input", function () {
+        window.onscroll = function (e) {
+            if (window.scrollY > document.querySelector("#openingAfterXScroll").value) {
+                console.log(window.scrollY);
+            }
+        };
+    });
 }
 
 // Trigger Cofiguration > OnClick
@@ -25,7 +23,7 @@ function triggerOnClick() {
 
 // Trigger Cofiguration > OnHover
 function triggerOnHover() {
-    
+
 }
 
 // Trigger Cofiguration > Exit Intent 

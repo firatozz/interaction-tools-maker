@@ -18,6 +18,7 @@
  var clsBtnWidth = config.desingCloseBtnWidth;
  var clsBtnHeight = config.desingCloseBtnHeight;
  var showCloseBtnAfterXSeconds = config.desingShowCloseBtnAfterXSeconds;
+ var posLocLeft, posLocTop;
 
 
  // Design > Overlay
@@ -143,7 +144,61 @@
 
 
  // Position > Fixed
- function positionFixed() {}
+ function positionFixedFunc() {
+     addEvent(document.querySelector("#fixedPositionTopLeft"), "click", function () {
+         posLocLeft = '1%';
+         posLocTop = '1%';
+     });
+     addEvent(document.querySelector("#fixedPositionTopCenter"), "click", function () {
+         posLocLeft = 'calc(50% - ' + width / 2 + "px)";
+         posLocTop = '1%';
+     });
+     addEvent(document.querySelector("#fixedPositionTopRight"), "click", function () {
+         posLocLeft = 'calc(99% - ' + width + "px)";
+         posLocTop = '1%';
+     });
+     addEvent(document.querySelector("#fixedPositionMiddleLeft"), "click", function () {
+         posLocLeft = '1%';
+         posLocTop = 'calc(50% - ' + width / 2 + "px)";
+     });
+     addEvent(document.querySelector("#fixedPositionCenter"), "click", function () {
+         posLocLeft = 'calc(50% - ' + width / 2 + "px)";
+         posLocTop = 'calc(50% - ' + width / 2 + "px)";
+     });
+     addEvent(document.querySelector("#fixedPositionMiddleRight"), "click", function () {
+         posLocLeft = 'calc(99% - ' + width + "px)";
+         posLocTop = 'calc(50% - ' + width / 2 + "px)";
+     });
+     addEvent(document.querySelector("#fixedPositionBottomLeft"), "click", function () {
+         posLocLeft = '1%';
+         posLocTop = 'calc(99% - ' + width + "px)";
+     });
+     addEvent(document.querySelector("#fixedPositionBottomCenter"), "click", function () {
+         posLocLeft = 'calc(50% - ' + width / 2 + "px)";
+         posLocTop = 'calc(99% - ' + width + "px)";
+     });
+     addEvent(document.querySelector("#fixedPositionBottomRight"), "click", function () {
+         posLocLeft = 'calc(99% - ' + width + "px)";
+         posLocTop = 'calc(99% - ' + width + "px)";
+     });
+
+     //Custom
+     addEvent(document.querySelector("#posCustomTop"), "input", function () {
+         posLocTop = document.querySelector("#posCustomTop").value + "px;";
+     });
+     addEvent(document.querySelector("#posCustomLeft"), "input", function () {
+         posLocLeft = document.querySelector("#posCustomLeft").value + "px;";
+     });
+ }
+ positionFixedFunc();
+
+ //  addEvent(document.querySelector("#list-position-list"), "click", function(){
+ //      console.log("load");
+ //      if(document.querySelector("#radioFixed")){
+ //          console.log("girdi");
+ //          document.querySelector("#customPositionCard").style.opacity = 0;
+ //      }
+ //  })
 
  // Position > Custom
  function positionCustom() {}
@@ -154,7 +209,7 @@
          ".bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: " + overlayColor + "; opacity:" + opacity + "; z-index: 10001;}" +
          ".popupEl{display: block; position: fixed; width: " + width + "px; height: " + height + "px; z-index: 10002;box-sizing:content-box; border: " + borderSize + "px " + borderStyle + " " + borderColor + "; border-radius:" + borderRadius + "px; " +
          constAnimation[preAnimation][0][0] +
-         "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:calc(50% - " + width / 2 + "px); top:calc(50% - " + height / 2 + "px);box-shadow: 0px 0px " + shadowBlur + "px " + shadowSpread + "px " + shadowColor + "; z-index: 10002;}" +
+         "transition:.5s ease-in-out;visibility: hidden;transform: translateX(calc(50% - " + width / 2 + "px)) translateY(calc(50% - " + height / 2 + "px)); left:" + posLocLeft + "; top:" + posLocTop + ";box-shadow: 0px 0px " + shadowBlur + "px " + shadowSpread + "px " + shadowColor + "; z-index: 10002;}" +
          ".popupEl.active{" + constAnimation[preAnimation][1][0] + "; visibility: visible;}" +
          ".popupElImg{width:" + width + "px; height: " + height + "px; border-radius:" + borderRadius + "px; }" +
          ".closeBtnEl{position: absolute;display:inline-block;visibility:" + clsVisibility + "; width: " + clsBtnWidth + ";height:" + clsBtnHeight + "; cursor: pointer; top:" + clsBtnPosTop + "; right:" + clsBtnPosRight + "; border-radius: 50%;" + closeBtnPosition + "}"
