@@ -19,10 +19,14 @@ function triggerOnScroll() {
 }
 
 // Trigger Cofiguration > OnClick
-function triggerOnClick() {}
+function triggerOnClick() {
+
+}
 
 // Trigger Cofiguration > OnHover
-function triggerOnHover() {}
+function triggerOnHover() {
+    
+}
 
 // Trigger Cofiguration > Exit Intent 
 function triggerExitIntent() {
