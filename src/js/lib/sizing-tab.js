@@ -3,12 +3,7 @@ import "./event-listener.js"
 
 var width = config.sizingWidth;
 var height = config.sizingHeight;
-var autoScalable = config.sizingAutoScalable;
-var autoSizing = config.sizingAutoSizing;
-var minWidth = config.sizingMinWidth;
-var maxWidth = config.sizingMaxWidth;
-var minHeight = config.sizingMinHeight;
-var maxHeight = config.sizingMaxHeight;
+
 
 var transformDefault = config.transformDefault;
 var popupEl = config.popupEl;
@@ -18,28 +13,11 @@ function popUpAutoSize() {
         width = document.querySelector("#imageWidth").value;
     });
     addEvent(document.querySelector("#imageHeight"), "input", function () {
-        width = document.querySelector("#imageHeight").value;
+        height = document.querySelector("#imageHeight").value;
     });
 }
 popUpAutoSize();
 
-function popupManuelSizing() {
-    addEvent(document.querySelector("#imageMinWidth"), "input", function () {
-        width = document.querySelector("#imageMinWidth").value;
-    });
-    addEvent(document.querySelector("#imageMinHeight"), "input", function () {
-        width = document.querySelector("#imageMinHeight").value;
-    });
-    addEvent(document.querySelector("#imageMaxWidth"), "input", function () {
-        width = document.querySelector("#imageMaxWidth").value;
-    });
-    addEvent(document.querySelector("#imageMaxHeight"), "input", function () {
-        width = document.querySelector("#imageMaxHeight").value;
-    });
-}
-if (config.sizingAutoSizing) {
-    popupManuelSizing();
-}
 
 // Handle scaling the popup
 function scalePopUp() {
@@ -95,11 +73,19 @@ function scalePopUp() {
     popupEl.style.transform = transformDefault + " scale(" + scaleTo + ")";
 }
 
-
-function autoScalableFunc() {
-    // Handle window resizing
-    addEvent(window, "resize", () => {
-        scalePopUp();
-    });
+function unScalePopUp() {
+    transformDefault = "";
 }
-autoScalableFunc();
+
+//  ????
+// addEvent(document.querySelector("#sizingAutoScalable"), "click", function () {
+//     if (document.querySelector("#sizingAutoScalable").checked) {
+//         console.log("True");
+//         addEvent(window, "resize", () => {
+//             scalePopUp();
+//         });
+//     } else {
+//         console.log("False");
+//         unScalePopUp();
+//     }  
+//});

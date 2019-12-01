@@ -19,7 +19,8 @@
  var clsBtnWidth = config.desingCloseBtnWidth;
  var clsBtnHeight = config.desingCloseBtnHeight;
  var showCloseBtnAfterXSeconds = config.desingShowCloseBtnAfterXSeconds;
- var posLocLeft, posLocTop;
+ var posLocLeft = 'calc(50% - ' + width / 2 + "px)";
+ var posLocTop = 'calc(50% - ' + width / 2 + "px)";
 
 
  // Design > Overlay
@@ -243,8 +244,8 @@
              1: []
          },
          popEffect: {
-             0: [],
-             1: []
+             0: ["transform:scale(0) !important;"],
+             1: ["transform:scale(1) !important;"]
          },
          fadeEffect: {
              0: ["opacity: 0;"],
@@ -282,6 +283,7 @@
      for (var i = 0; i < Object.keys(constAnimation).length; i++) {
          if (Object.keys(constAnimation)[i] === config.effectsOpeningAnimation) {
              preAnimation = (Object.keys(constAnimation)[i]);
+             console.log(constAnimation[preAnimation][0][0]);
          }
      }
  }

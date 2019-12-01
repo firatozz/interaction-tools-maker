@@ -58,9 +58,9 @@ var config = {
     positionBottom = 0,
 
     /* Effects Tab Config Variables*/
-    effectsOpeningAnimation = "fadeEffect",
+    effectsOpeningAnimation = "popEffect",
     effectsOpeningAnimationDuration = 800,
-    effectsCloseAnimation = "fadeEffect",
+    effectsCloseAnimation = "popEffect",
     effectsCloseAnimationDuration = 800,
 
     /* Sizing Tab Config Variables*/

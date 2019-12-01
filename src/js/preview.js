@@ -36,7 +36,6 @@ function setOptions() {
         //loadEvents();
     });
     addCSS();
-
     elementConstructor();
 
     dismissOnCloseBtnClick();
