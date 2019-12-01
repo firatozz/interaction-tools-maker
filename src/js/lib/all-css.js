@@ -1,4 +1,5 @@
  import './all-configurations.js'
+ import './sizing-tab.js'
  import './event-listener.js'
 
  var width = config.sizingWidth;

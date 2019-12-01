@@ -39,8 +39,6 @@ function setOptions() {
 
     elementConstructor();
 
-    scalePopUp(); // ??
-
     dismissOnCloseBtnClick();
 
     function closeBtnShowingTimer() {
