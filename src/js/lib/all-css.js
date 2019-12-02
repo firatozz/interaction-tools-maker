@@ -208,7 +208,7 @@
  function addCSS() {
 
      var css = document.createTextNode(
-         "body{overflow: hidden;}"+
+         "body{overflow: hidden;}" +
          ".bgEl{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: " + overlayColor + "; opacity:" + opacity + "; z-index: 10001;}" +
          ".popupEl{display: block; position: fixed; width: " + width + "px; height: " + height + "px; z-index: 10002;box-sizing:content-box; border: " + borderSize + "px " + borderStyle + " " + borderColor + "; border-radius:" + borderRadius + "px; " +
          constAnimation[preAnimation][0][0] +
