@@ -58,10 +58,11 @@ var config = {
     positionBottom = 0,
 
     /* Effects Tab Config Variables*/
-    effectsOpeningAnimation = "popEffect",
+    effectsOpeningAnimation = "noneEffect",
     effectsOpeningAnimationDuration = 800,
-    effectsCloseAnimation = "popEffect",
+    effectsCloseAnimation = "noneEffect",
     effectsCloseAnimationDuration = 800,
+
 
     /* Sizing Tab Config Variables*/
     sizingWidth = 400,

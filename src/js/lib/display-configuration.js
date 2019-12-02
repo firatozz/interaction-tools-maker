@@ -2,7 +2,6 @@ import './all-configurations.js'
 
 var displayShowAfterXPagesVisit = config.displayShowAfterXPagesVisit;
 var displayShowAfterXPagesVisitCount = config.displayShowAfterXPagesVisitCount;
-var canScroll = config.displayCanScroll;
 
 
 function afterXPagesVisit() {
@@ -25,16 +24,32 @@ function afterXPagesVisit() {
         return false;
     }
 }
-if (canScroll) {
-    function canScrollFunc() {
-        document.body.style.overflow = "auto"; //True. If wanna false   "hidden"
-    }
-    canScrollFunc();
-}
+// if (config.displayPageScrolling) {
+//     function canScrollFunc() {
+//         document.body.style.overflow = "auto"; //True. If wanna false   "hidden"
+//     }
+//     canScrollFunc();
+// }
 
 //Display Configuration > Devices
 
 //Display Configuration > Show Rules
+
+
+// function pageScrollingFunc() {
+//     addEvent(document.querySelector("#pageScrolling"), "onclick", function () {
+//         console.log(document.querySelector("#pageScrolling").checked);
+//         config.displayPageScrolling = document.querySelector("#pageScrolling").checked;
+//     });
+//     if (document.querySelector("#pageScrolling").checked) {
+//         document.body.style.overflow = "auto";
+//     } else {
+//         document.body.style.overflow = "hidden";
+//     }
+// }
+// pageScrollingFunc();
+
+
 
 //Display Configuration > Geo Targeting
 
