@@ -19,15 +19,6 @@ function clearBody() {
     document.querySelector("#itmStyles").remove();
 }
 
-function dismissOnOverlayClick() {
-    // Handle the popup click overlay
-    addEvent(bgEl, "click", () => {
-        hidePopUp();
-        setTimeout(() => {
-            clearBody()
-        }, 1000);
-    });
-}
 
 function dismissOnContentClick() {
     // If targetOpenNewTab have worked, the box will close
@@ -39,16 +30,30 @@ function dismissOnContentClick() {
     });
 }
 
+
+function dismissOnOverlayClick() {
+    // Handle the popup click overlay
+    addEvent(bgEl, "click", () => {
+        hidePopUp();
+        setTimeout(() => {
+            clearBody()
+        }, 1000);
+    });
+}
+
+
+
 function dismissOnCloseBtnClick() {
     // Handle the popup close button
     addEvent(closeBtnEl, "click", () => {
         hidePopUp();
         setTimeout(() => {
             clearBody()
-            
+
         }, 1000);
     });
 }
+
 
 function dismissAutoClose() {
     addEvent(bgEl, "mousemove", () => {

@@ -48,26 +48,38 @@ function setOptions() {
     closeBtnShowingTimer();
 
     //General Tab  Configuration Setup
-    if (config.generalAllowPopupDismissal) {
+    // if (config.generalAllowPopupDismissal) {
+    //     dismissOnOverlayClick();
+    //     dismissOnContentClick();
+    //     dismissOnEscClick();
+    //     dismissAutoClose();
+    // }
+
+    
+addEvent(document.querySelector("#dismissOnOverlayClick"), "click", function () {
+    if (document.querySelector("#dismissOnOverlayClick").checked) {
+        console.log("Test");
         dismissOnOverlayClick();
-        dismissOnContentClick();
-        dismissOnEscClick();
-        dismissAutoClose();
     }
+});
 
-    if (config.generalDismissOnOverlayClick) {
-        dismissOnOverlayClick();
-    }
 
-    if (config.generalDismissOncontentClick) {
-        dismissOnContentClick();
-    }
-
-    if (config.generalAutoClose) {
-        dismissAutoClose();
-    }
-
-    if (config.generalDismissOnEsc) {
+addEvent(document.querySelector("#dismissOnEsc"), "click", function () {
+    if (document.querySelector("#dismissOnEsc").checked) {
         dismissOnEscClick();
     }
+});
+
+addEvent(document.querySelector("#autoCloseGeneral"), "click", function () {
+    if (document.querySelector("#autoCloseGeneral").checked) {
+        dismissAutoClose();
+    }
+});
+
+addEvent(document.querySelector("#dismissOnContentClick"), "click", function () {
+    if (document.querySelector("#dismissOnContentClick").checked) {
+        dismissOnContentClick();
+    }
+});
+
 }
