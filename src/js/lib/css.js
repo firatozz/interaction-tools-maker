@@ -1,4 +1,4 @@
- import './all-configurations.js'
+ import './configurations.js'
  import './sizing-tab.js'
  import './event-listener.js'
 

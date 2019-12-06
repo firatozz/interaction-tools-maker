@@ -1,4 +1,4 @@
-import './all-configurations.js'
+import './configurations.js'
 import "./event-listener.js"
 
 var width = config.sizingWidth;
