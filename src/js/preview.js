@@ -1,9 +1,9 @@
-import './lib/css.js/index.js'
+import './lib/css-configuration.js'
 import './lib/sizing-tab.js'
 import './lib/general-tab.js'
 import './lib/event-listener.js'
 import './lib/cookie-management.js'
-import './lib/configurations.js/index.js'
+import './lib/configurations.js'
 import './lib/element-constructor.js'
 import './lib/trigger-configuration.js'
 

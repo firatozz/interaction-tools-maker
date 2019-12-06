@@ -1,5 +1,5 @@
 import './configurations.js'
-import './css.js/index.js'
+import './css-configuration.js'
 
 //var config = allConfig();
 var bgEl = config.bgEl;

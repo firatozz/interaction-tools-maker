@@ -1,4 +1,4 @@
-import './configurations.js/index.js'
+import './configurations.js'
 
 var displayShowAfterXPagesVisit = config.displayShowAfterXPagesVisit;
 var displayShowAfterXPagesVisitCount = config.displayShowAfterXPagesVisitCount;
