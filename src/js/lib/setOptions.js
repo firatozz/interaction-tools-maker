@@ -17,4 +17,14 @@ function setOptions(opts) {
     // Desing Tab Define
     config.desingOverlayVisible = (typeof opts.desingOverlayVisible === 'undefined') ? config.desingOverlayVisible : opts.desingOverlayVisible;
     config.desingOverlayColor = (typeof opts.desingOverlayColor === 'undefined') ? config.desingOverlayColor : opts.desingOverlayColor;
+    config.desingOverlayOpacity = (typeof opts.desingOverlayOpacity === 'undefined') ? config.desingOverlayOpacity : opts.desingOverlayOpacity;
+    config.desingBorderStyle = (typeof opts.desingBorderStyle === 'undefined') ? config.desingBorderStyle : opts.desingBorderStyle;
+    config.desingBorderColor = (typeof opts.desingBorderColor === 'undefined') ? config.desingBorderColor : opts.desingBorderColor;
+    config.desingBorderRadius = (typeof opts.desingBorderRadius === 'undefined') ? config.desingBorderRadius : opts.desingBorderRadius;
+    config.desingBorderSize = (typeof opts.desingBorderSize === 'undefined') ? config.desingBorderSize : opts.desingBorderSize;
+    config.desingShowCloseBtn = (typeof opts.desingShowCloseBtn === 'undefined') ? config.desingShowCloseBtn : opts.desingShowCloseBtn;
+    config.desingShowCloseBtnAfterXSeconds = (typeof opts.desingShowCloseBtnAfterXSeconds === 'undefined') ? config.desingShowCloseBtnAfterXSeconds : opts.desingShowCloseBtnAfterXSeconds;
+    config.desingCloseBtnImage = (typeof opts.desingCloseBtnImage === 'undefined') ? config.desingCloseBtnImage : opts.desingCloseBtnImage;
+    config.desingCloseBtnPosition = (typeof opts.desingCloseBtnPosition === 'undefined') ? config.desingCloseBtnPosition : opts.desingCloseBtnPosition;
+    
 }
