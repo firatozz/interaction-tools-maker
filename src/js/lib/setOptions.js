@@ -26,5 +26,13 @@ function setOptions(opts) {
     config.desingShowCloseBtnAfterXSeconds = (typeof opts.desingShowCloseBtnAfterXSeconds === 'undefined') ? config.desingShowCloseBtnAfterXSeconds : opts.desingShowCloseBtnAfterXSeconds;
     config.desingCloseBtnImage = (typeof opts.desingCloseBtnImage === 'undefined') ? config.desingCloseBtnImage : opts.desingCloseBtnImage;
     config.desingCloseBtnPosition = (typeof opts.desingCloseBtnPosition === 'undefined') ? config.desingCloseBtnPosition : opts.desingCloseBtnPosition;
-    
+    config.desingCloseBtnPositionTop = (typeof opts.desingCloseBtnPositionTop === 'undefined') ? config.desingCloseBtnPositionTop : opts.desingCloseBtnPositionTop;
+    config.desingCloseBtnPositionRight = (typeof opts.desingCloseBtnPositionRight === 'undefined') ? config.desingCloseBtnPositionRight : opts.desingCloseBtnPositionRight;
+    config.desingCloseBtnWidth = (typeof opts.desingCloseBtnWidth === 'undefined') ? config.desingCloseBtnWidth : opts.desingCloseBtnWidth;
+    config.desingCloseBtnHeight = (typeof opts.desingCloseBtnHeight === 'undefined') ? config.desingCloseBtnHeight : opts.desingCloseBtnHeight;
+    config.desingShadowSpread = (typeof opts.desingShadowSpread === 'undefined') ? config.desingShadowSpread : opts.desingShadowSpread;
+    config.desingShadowBlur = (typeof opts.desingShadowBlur === 'undefined') ? config.desingShadowBlur : opts.desingShadowBlur;
+    config.desingShadowColor = (typeof opts.desingShadowColor === 'undefined') ? config.desingShadowColor : opts.desingShadowColor;
+
+    //Trigger Configuration Tab Define
 }
