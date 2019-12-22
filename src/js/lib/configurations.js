@@ -54,8 +54,6 @@ var config = {
     positionCustom = false,
     positionTop = 0,
     positionLeft = 0,
-    positionRight = 0,
-    positionBottom = 0,
 
     /* Effects Tab Config Variables*/
     effectsOpeningAnimation = "noneEffect",
@@ -68,11 +66,6 @@ var config = {
     sizingWidth = 400,
     sizingHeight = 300,
     sizingAutoScalable = true,
-    sizingAutoSizing = true,
-    sizingMinWidth = 100,
-    sizingMaxWidth = 400,
-    sizingMinHeight = 75,
-    sizingMaxHeight = 300,
 
     /* Display Configuration Tab Config Variables*/
     displayShowOnDesktop = true,
