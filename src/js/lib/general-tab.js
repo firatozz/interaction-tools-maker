@@ -76,3 +76,30 @@ function dismissOnEscClick() {
         }
     });
 }
+
+
+addEvent(document.querySelector("#dismissOnOverlayClick"), "click", function () {
+    if (document.querySelector("#dismissOnOverlayClick").checked) {
+        console.log("Test");
+        dismissOnOverlayClick();
+    }
+});
+
+
+addEvent(document.querySelector("#dismissOnEsc"), "click", function () {
+    if (document.querySelector("#dismissOnEsc").checked) {
+        dismissOnEscClick();
+    }
+});
+
+addEvent(document.querySelector("#autoCloseGeneral"), "click", function () {
+    if (document.querySelector("#autoCloseGeneral").checked) {
+        dismissAutoClose();
+    }
+});
+
+addEvent(document.querySelector("#dismissOnContentClick"), "click", function () {
+    if (document.querySelector("#dismissOnContentClick").checked) {
+        dismissOnContentClick();
+    }
+});
